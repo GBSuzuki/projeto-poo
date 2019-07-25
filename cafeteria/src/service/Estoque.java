@@ -4,9 +4,10 @@
 package service;
 
 import domain.MateriaPrima;
-import helpers.jsonKIT;
 import service.interfaces.IEstoque;
+import service.interfaces.IPersistenceService;
 
+import javax.inject.Inject;
 import javax.inject.Singleton;
 import java.util.ArrayList;
 import java.util.UUID;
@@ -14,12 +15,14 @@ import java.util.UUID;
 @Singleton
 public class Estoque implements IEstoque {
     private ArrayList<MateriaPrima> Materiais;
-
-    public Estoque() {
+    private IPersistenceService persistenceService;
+    @Inject
+    public Estoque(IPersistenceService persistenceService) {
+        this.persistenceService = persistenceService;
         Materiais = new ArrayList<>();
 
         //Carregar dados do json em Materiais
-        Materiais = jsonKIT.getJsonEstoque();
+        Materiais = persistenceService.getEstoque();
     }
 
     /* Método remove MateriaPrima do estoque */
@@ -27,7 +30,7 @@ public class Estoque implements IEstoque {
         Materiais.removeIf(x -> x.getId() == id_MP);
 
         //Remover do json
-        jsonKIT.setJSON(Materiais, "Estoque.json");
+        persistenceService.setEstoque(Materiais);
     }
 
     /* Método adiciona matéria prima ao estoque, verifica se já existe alguma
@@ -44,7 +47,7 @@ public class Estoque implements IEstoque {
             mp.setPreco(preco);
         }
 
-        jsonKIT.setJSON(Materiais, "Estoque.json");
+        persistenceService.setEstoque(Materiais);
     }
 
     /* Método retorna MateriaPrima de acordo com nome,

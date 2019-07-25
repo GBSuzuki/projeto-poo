@@ -2,9 +2,9 @@ package service;
 
 
 import domain.Receita;
-import helpers.jsonKIT;
 import service.interfaces.IBancoDeReceitas;
 import service.interfaces.IEstoque;
+import service.interfaces.IPersistenceService;
 
 import javax.inject.Inject;
 import javax.inject.Singleton;
@@ -15,13 +15,15 @@ import java.util.UUID;
 public class BancoDeReceitas implements IBancoDeReceitas {
 
     private final IEstoque estoque;
+    private final IPersistenceService persistenceService;
     private ArrayList<Receita> Receitas;
 
     @Inject
-    public BancoDeReceitas(IEstoque estoque) {
+    public BancoDeReceitas(IEstoque estoque, IPersistenceService persistenceService) {
         this.estoque = estoque;
+        this.persistenceService = persistenceService;
         Receitas = new ArrayList<>();
-        Receitas = jsonKIT.getJsonBancoReceitas();
+        Receitas = persistenceService.getBancoReceitas();
     }
 
     public ArrayList<Receita> getReceitas() {
@@ -54,16 +56,16 @@ public class BancoDeReceitas implements IBancoDeReceitas {
 
     public void AdicionaReceita(Receita receita) {
         Receitas.add(receita);
-        jsonKIT.setJSON(Receitas, "BancoReceitas.json");
+        persistenceService.setBancoReceitas(Receitas);
     }
 
     public void RemoveReceita(UUID Id) {
         Receitas.removeIf(x -> x.getId().equals(Id));
-        jsonKIT.setJSON(Receitas, "BancoReceitas.json");
+        persistenceService.setBancoReceitas(Receitas);
     }
 
     public void RemoveReceita(String NomeReceita) {
         Receitas.removeIf(x -> x.getNomeReceita().equals(NomeReceita));
-        jsonKIT.setJSON(Receitas, "BancoReceitas.json");
+        persistenceService.setBancoReceitas(Receitas);
     }
 }
