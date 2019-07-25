@@ -1,0 +1,65 @@
+/* Todas os métodos abaixo foram testados (21/07/2019)
+ * e funcionaram como esperado. */
+
+package service;
+
+import domain.MateriaPrima;
+import helpers.jsonKIT;
+import service.interfaces.IEstoque;
+
+import javax.inject.Singleton;
+import java.util.ArrayList;
+import java.util.UUID;
+
+@Singleton
+public class Estoque implements IEstoque {
+    private ArrayList<MateriaPrima> Materiais;
+
+    public Estoque() {
+        Materiais = new ArrayList<>();
+
+        //Carregar dados do json em Materiais
+        Materiais = jsonKIT.getJsonEstoque();
+    }
+
+    /* Método remove MateriaPrima do estoque */
+    public void RemoveMP(UUID id_MP) {
+        Materiais.removeIf(x -> x.getId() == id_MP);
+
+        //Remover do json
+        jsonKIT.setJSON(Materiais, "Estoque.json");
+    }
+
+    /* Método adiciona matéria prima ao estoque, verifica se já existe alguma
+     * com mesmo nome, se já existir apenas atualiza os dados.*/
+    public void AdicionaMP(String nome, int quantidade, float preco) {
+        /* Verifica se Materia prima já existe no Estoque */
+        if (Materiais.stream().noneMatch(x -> x.getNome().equals(nome)))
+            /* Adiciona a materia prima instanciada ao ArrayList */
+            Materiais.add(new MateriaPrima(nome, quantidade, preco));
+        else {
+            /* Se já existir, só altera os atributos */
+            MateriaPrima mp = getMP(nome);
+            mp.updateQuantidade(quantidade);
+            mp.setPreco(preco);
+        }
+
+        jsonKIT.setJSON(Materiais, "Estoque.json");
+    }
+
+    /* Método retorna MateriaPrima de acordo com nome,
+     * caso não encontre retorna nulo. */
+    public MateriaPrima getMP(String nome) {
+        return Materiais.stream().filter(x -> x.getNome().equals(nome)).findAny().orElse(null);
+    }
+
+    /* Método retorna MateriaPrima de acordo com nome,
+     * caso não encontre retorna nulo. */
+    public MateriaPrima getMP(UUID Id) {
+        return Materiais.stream().filter(x -> x.getId().equals(Id)).findAny().orElse(null);
+    }
+
+    public ArrayList<MateriaPrima> getMateriais() {
+        return Materiais;
+    }
+}
