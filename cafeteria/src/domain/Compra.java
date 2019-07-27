@@ -14,4 +14,9 @@ public class Compra extends ATransacao {
     public float getValorTotal() {
         return getQuantidade()*getValor();
     }
+
+    @Override
+    public String getTipo() {
+        return "Compra";
+    }
 }

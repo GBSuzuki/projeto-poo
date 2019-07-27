@@ -1,5 +1,6 @@
 import domain.Compra;
 import domain.Receita;
+import domain.Venda;
 import eu.lestard.easydi.EasyDI;
 import service.BancoDeReceitas;
 import service.Estoque;
@@ -28,8 +29,10 @@ public class Main {
         Receita cafecleite = new Receita("cafecomleite");
 
         cafecleite.addIngrediente(e.getMP("Cafe").getId(), 1);
-        cafecleite.addIngrediente(e.getMP("Leite").getId(), 3);
+        cafecleite.addIngrediente(e.getMP("Leite").getId(), 1);
 
         a.AdicionaReceita(cafecleite);
+
+        t.efetuaVenda(new Venda("cafecomleite", 1, 15));
     }
 }

@@ -24,4 +24,6 @@ public abstract class ATransacao {
     }
 
     public abstract float getValorTotal();
+
+    public abstract String getTipo();
 }

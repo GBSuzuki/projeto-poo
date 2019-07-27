@@ -7,6 +7,10 @@ import service.interfaces.IEstoque;
 import service.interfaces.ITranscaoService;
 
 import javax.inject.Inject;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
 import java.util.Map;
 import java.util.UUID;
 
@@ -14,6 +18,33 @@ public class TransacaoService implements ITranscaoService {
 
     private final IBancoDeReceitas bancoDeReceitas;
     private final IEstoque estoque;
+
+    private Connection connect() {
+        String url = "jdbc:sqlite:cafeteria.db";
+        Connection conn = null;
+        try {
+            conn = DriverManager.getConnection(url);
+        } catch (SQLException e) {
+            System.out.println(e.getMessage());
+        }
+        return conn;
+    }
+
+    private void insert(ATransacao transacao)
+    {
+        String sql = "INSERT INTO Transacoes (Nome, Tipo, Valor, Quantidade) VALUES (?,?,?,?)";
+        try{
+            Connection con = connect();
+            PreparedStatement pstmt = con.prepareStatement(sql);
+            pstmt.setString(1,transacao.getNome());
+            pstmt.setString(2, transacao.getTipo());
+            pstmt.setFloat(3, transacao.getValorTotal());
+            pstmt.setInt(4, transacao.getQuantidade());
+            pstmt.execute();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
 
     @Inject
     public TransacaoService(IBancoDeReceitas bancoDeReceitas, IEstoque estoque) {
@@ -25,6 +56,7 @@ public class TransacaoService implements ITranscaoService {
     public boolean efetuaCompra(ATransacao compra) {
         try {
             estoque.AdicionaMP(compra.getNome(), compra.getQuantidade(), compra.getValor());
+            insert(compra);
             return true;
         }
         catch (Exception ex) {
@@ -38,6 +70,7 @@ public class TransacaoService implements ITranscaoService {
         for(Map.Entry<UUID, Integer> entry : receita.getIngredientes().entrySet())
             if(estoque.getMP(entry.getKey()).getQuantidade() < entry.getValue() * venda.getQuantidade())
                 return false;
+        insert(venda);
         return true;
     }
 }

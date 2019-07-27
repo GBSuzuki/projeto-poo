@@ -1,15 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9318db9a-586e-4cd1-94be-70059495064c" name="Default Changelist" comment="">
+    <list default="true" id="9318db9a-586e-4cd1-94be-70059495064c" name="Default Changelist" comment="Alteraçõess para rodar">
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/sqlite_jdbc_3_27_2_1.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/BancoReceitas.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/cafeteria/META-INF/cafeteria.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Estoque.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cafeteria.iml" beforeDir="false" afterPath="$PROJECT_DIR$/cafeteria.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/domain/Compra.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/domain/Compra.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/domain/Receita.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/domain/Receita.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/service/Estoque.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/service/Estoque.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/service/PersistenceService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/service/PersistenceService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/domain/Venda.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/domain/Venda.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/domain/interfaces/ATransacao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/domain/interfaces/ATransacao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/service/TransacaoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/service/TransacaoService.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -34,6 +36,7 @@
   <component name="ProjectId" id="1OTbl5jUYY0Shdc382YZPPyOLEd" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Modules" />
@@ -101,6 +104,21 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Alteraçõess para rodar" />
+    <option name="LAST_COMMIT_MESSAGE" value="Alteraçõess para rodar" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/service/TransacaoService.java</url>
+          <line>68</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/cafeteria$Main.ic" NAME="Main Coverage Results" MODIFIED="1564092991834" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
