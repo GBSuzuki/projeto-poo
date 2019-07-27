@@ -1,0 +1,14 @@
+[
+  {
+    "Id": "cd70cb9e-c18e-417a-97de-49562ef5eaec",
+    "Nome": "Cafe",
+    "Quantidade": 5,
+    "Preco": 4.0
+  },
+  {
+    "Id": "4dbadbcc-41fb-4d64-ad2c-8c45316859c9",
+    "Nome": "Leite",
+    "Quantidade": 10,
+    "Preco": 6.0
+  }
+]

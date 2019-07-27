@@ -1,5 +1,6 @@
 package domain;
 
+import javax.inject.Inject;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.UUID;
@@ -29,6 +30,11 @@ public class Receita {
 
     public void setIngredientes(Map<UUID, Integer> ingredientes) {
         Ingredientes = ingredientes;
+    }
+
+    public void addIngrediente(UUID id, Integer quant)
+    {
+        Ingredientes.put(id, quant);
     }
 
     public void AdicionaMP(UUID Id, int quantidade) {

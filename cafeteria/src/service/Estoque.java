@@ -36,12 +36,9 @@ public class Estoque implements IEstoque {
     /* Método adiciona matéria prima ao estoque, verifica se já existe alguma
      * com mesmo nome, se já existir apenas atualiza os dados.*/
     public void AdicionaMP(String nome, int quantidade, float preco) {
-        /* Verifica se Materia prima já existe no Estoque */
         if (Materiais.stream().noneMatch(x -> x.getNome().equals(nome)))
-            /* Adiciona a materia prima instanciada ao ArrayList */
             Materiais.add(new MateriaPrima(nome, quantidade, preco));
         else {
-            /* Se já existir, só altera os atributos */
             MateriaPrima mp = getMP(nome);
             mp.updateQuantidade(quantidade);
             mp.setPreco(preco);

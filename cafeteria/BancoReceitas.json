@@ -1,7 +1,10 @@
 [
   {
-    "Id": "47050d54-f72f-4582-8eba-b77ae3b7ec60",
-    "NomeReceita": "Teste",
-    "Ingredientes": {}
+    "Id": "dcc03f3f-2e43-42e9-86e6-ec423ee75a96",
+    "NomeReceita": "cafecomleite",
+    "Ingredientes": {
+      "4dbadbcc-41fb-4d64-ad2c-8c45316859c9": 3,
+      "cd70cb9e-c18e-417a-97de-49562ef5eaec": 1
+    }
   }
 ]

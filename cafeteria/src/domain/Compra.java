@@ -6,7 +6,7 @@ import java.util.UUID;
 
 public class Compra extends ATransacao {
 
-    protected Compra(String nome, int quantidade, float valor) {
+    public Compra(String nome, int quantidade, float valor) {
         super(nome, quantidade, valor);
     }
 

@@ -56,13 +56,12 @@ public class PersistenceService implements IPersistenceService {
         ArrayList<TOut> obj = null;
         try {
             BufferedReader br = new BufferedReader(new FileReader(arquivo));
-            obj = gson.fromJson(br, new TypeToken<List<TOut>>() {
-            }.getType());
-        } catch (IOException e) {
-            //e.printStackTrace();
+            obj = gson.fromJson(br, obj.getClass());
         }
-        if(obj == null)
-            return new ArrayList<TOut>();
-        return obj;
+        finally {
+            if(obj == null)
+                return new ArrayList<TOut>();
+            return obj;
+        }
     }
 }
