@@ -11,6 +11,8 @@ import service.interfaces.IEstoque;
 import service.interfaces.IPersistenceService;
 import service.interfaces.ITranscaoService;
 
+import java.sql.Timestamp;
+
 public class Main {
     public static void main(String[] args) {
         EasyDI easyDI = new EasyDI();
@@ -34,5 +36,8 @@ public class Main {
         a.AdicionaReceita(cafecleite);
 
         t.efetuaVenda(new Venda("cafecomleite", 1, 15));
+
+        var co = t.getCompras(new Timestamp(System.currentTimeMillis()));
+        var ce = t.getVendas(new Timestamp(System.currentTimeMillis()));
     }
 }

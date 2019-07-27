@@ -4,7 +4,11 @@ import domain.interfaces.ATransacao;
 
 public class Venda extends ATransacao {
     public Venda(String nome, int quantidade, float valor) {
-        super(nome, quantidade, valor);
+        super(nome, quantidade, valor, "");
+    }
+
+    public Venda(String nome, int quantidade, float valor, String data) {
+        super(nome, quantidade, valor, data);
     }
 
     @Override

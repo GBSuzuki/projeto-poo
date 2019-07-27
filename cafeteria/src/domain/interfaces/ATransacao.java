@@ -4,11 +4,17 @@ public abstract class ATransacao {
     private final String nome;
     private final int quantidade;
     private final float valor;
+    private String data;
 
-    protected ATransacao(String nome, int quantidade, float valor) {
+    public String getData() {
+        return data;
+    }
+
+    protected ATransacao(String nome, int quantidade, float valor, String data) {
         this.nome = nome;
         this.quantidade = quantidade;
         this.valor = valor;
+        this.data = data;
     }
 
     public float getValor() {

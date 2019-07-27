@@ -2,16 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9318db9a-586e-4cd1-94be-70059495064c" name="Default Changelist" comment="Alteraçõess para rodar">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/sqlite_jdbc_3_27_2_1.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BancoReceitas.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Estoque.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cafeteria.iml" beforeDir="false" afterPath="$PROJECT_DIR$/cafeteria.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BancoReceitas.json" beforeDir="false" afterPath="$PROJECT_DIR$/BancoReceitas.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Estoque.json" beforeDir="false" afterPath="$PROJECT_DIR$/Estoque.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cafeteria.db" beforeDir="false" afterPath="$PROJECT_DIR$/cafeteria.db" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/domain/Compra.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/domain/Compra.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/domain/Venda.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/domain/Venda.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/domain/interfaces/ATransacao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/domain/interfaces/ATransacao.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/service/TransacaoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/service/TransacaoService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/service/interfaces/ITranscaoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/service/interfaces/ITranscaoService.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -113,9 +113,9 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/service/TransacaoService.java</url>
-          <line>68</line>
-          <option name="timeStamp" value="2" />
+          <url>file://$PROJECT_DIR$/src/Main.java</url>
+          <line>41</line>
+          <option name="timeStamp" value="3" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
