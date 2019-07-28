@@ -3,6 +3,7 @@ package service.interfaces;
 import domain.Receita;
 
 import java.util.ArrayList;
+import java.util.Map;
 import java.util.UUID;
 
 public interface IBancoDeReceitas {
@@ -21,4 +22,10 @@ public interface IBancoDeReceitas {
     void RemoveReceita(UUID Id);
 
     void RemoveReceita(String NomeReceita);
+
+    public void attDisp();
+
+    public int obterDisp(UUID Id);
+
+    public Map<UUID, Integer> obterDispAll();
 }

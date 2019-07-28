@@ -1,6 +1,7 @@
 package service;
 
-
+import helpers.IoC;
+import domain.ProdutosFinais;
 import domain.Receita;
 import service.interfaces.IBancoDeReceitas;
 import service.interfaces.IEstoque;
@@ -9,6 +10,7 @@ import service.interfaces.IPersistenceService;
 import javax.inject.Inject;
 import javax.inject.Singleton;
 import java.util.ArrayList;
+import java.util.Map;
 import java.util.UUID;
 
 @Singleton
@@ -17,6 +19,7 @@ public class BancoDeReceitas implements IBancoDeReceitas {
     private final IEstoque estoque;
     private final IPersistenceService persistenceService;
     private ArrayList<Receita> Receitas;
+    private ProdutosFinais produtosFinais;
 
     @Inject
     public BancoDeReceitas(IEstoque estoque, IPersistenceService persistenceService) {
@@ -67,5 +70,17 @@ public class BancoDeReceitas implements IBancoDeReceitas {
     public void RemoveReceita(String NomeReceita) {
         Receitas.removeIf(x -> x.getNomeReceita().equals(NomeReceita));
         persistenceService.setBancoReceitas(Receitas);
+    }
+
+    public void attDisp(){
+        produtosFinais.calcProdutos();
+    }
+
+    public int obterDisp(UUID Id){
+        return  produtosFinais.getDisponivel(Id);
+    }
+
+    public Map<UUID, Integer> obterDispAll(){
+        return produtosFinais.getProdutos();
     }
 }

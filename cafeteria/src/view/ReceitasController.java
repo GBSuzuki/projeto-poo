@@ -1,10 +1,9 @@
 package view;
 
-import domain.MateriaPrima;
+import domain.ProdutosFinais;
+import domain.Receita;
 import helpers.IoC;
 import javafx.beans.property.SimpleStringProperty;
-import javafx.collections.FXCollections;
-import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
@@ -14,7 +13,6 @@ import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.stage.Stage;
 import service.interfaces.IBancoDeReceitas;
-import service.interfaces.IEstoque;
 import service.interfaces.ITranscaoService;
 
 import javax.inject.Inject;
@@ -22,49 +20,47 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-public class EstoqueController implements Initializable {
+public class ReceitasController implements Initializable {
     private final ITranscaoService transacao;
-    private final IEstoque estoque;
     private final IBancoDeReceitas receitas;
-
-    private ObservableList<MateriaPrima> Estoque = FXCollections.observableArrayList();
 
     //Injeta o estoque
     @Inject
-    public EstoqueController(IEstoque estoque, ITranscaoService transacao, IBancoDeReceitas receitas) {
+    public ReceitasController(IBancoDeReceitas receitas, ITranscaoService transacao) {
         this.transacao = transacao;
-        this.estoque = estoque;
         this.receitas = receitas;
     }
 
     @FXML
-    private TableView<MateriaPrima> tbData;
+    private TableView<Receita> tbData;
 
     @FXML
-    public TableColumn<MateriaPrima, String> nome;
+    public TableColumn<Receita, String> nome;
 
     @FXML
-    public TableColumn<MateriaPrima, String> preco;
+    public TableColumn<Receita, String> preco;
 
     @FXML
-    TableColumn<MateriaPrima, String> qtd;
+    TableColumn<Receita, String> qtd;
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        nome.setCellValueFactory(c -> new SimpleStringProperty(c.getValue().getNome()));
-        preco.setCellValueFactory(c -> new SimpleStringProperty(Float.toString(c.getValue().getPreco())));
-        qtd.setCellValueFactory(c -> new SimpleStringProperty(Integer.toString(c.getValue().getQuantidade())));
+        nome.setCellValueFactory(c -> new SimpleStringProperty(c.getValue().getNomeReceita()));
+        preco.setCellValueFactory(c -> new SimpleStringProperty(
+                Float.toString(receitas.ObterPreco(c.getValue().getNomeReceita())))
+        );
+        qtd.setCellValueFactory(c -> new SimpleStringProperty(Integer.toString(receitas.obterDisp(c.getValue().getId()))));
 
-        tbData.getItems().addAll(estoque.getMateriais());
+        tbData.getItems().addAll(receitas.getReceitas());
     }
 
     public void reloadList() {
         tbData.getItems().clear();
-        tbData.getItems().addAll(estoque.getMateriais());
+        tbData.getItems().addAll(receitas.getReceitas());
     }
 
     @FXML
-    public void adicionarMP() {
+    public void criaReceita() {
         try {
             FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("CompraProduto.fxml"));
             fxmlLoader.setControllerFactory(IoC.context::getInstance);
@@ -84,7 +80,7 @@ public class EstoqueController implements Initializable {
     }
 
     @FXML
-    public void removeMP() {
+    public void removeReceita() {
         transacao.removeCompra(tbData.getSelectionModel().getSelectedItem().getId());
         reloadList();
     }

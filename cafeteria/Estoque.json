@@ -1,20 +1,14 @@
 [
   {
-    "Id": "32501edf-b429-49e1-8085-df26ab21e98d",
-    "Nome": "Cafe",
-    "Quantidade": 45,
+    "Id": "93c926e8-e7d0-4718-99b2-2dde9a2d4bb0",
+    "Nome": "Café",
+    "Quantidade": 30,
     "Preco": 5.0
   },
   {
-    "Id": "b73a0c63-9797-4cbb-a5a4-5f60b089f5fb",
+    "Id": "81751cf8-4736-45e7-9c5f-aef1cbb19d46",
     "Nome": "Leite",
     "Quantidade": 10,
-    "Preco": 6.0
-  },
-  {
-    "Id": "ff5f3ec3-7ed5-45e7-949d-f3cd83c96772",
-    "Nome": "Avelã",
-    "Quantidade": 555,
-    "Preco": 8.0
+    "Preco": 2.0
   }
 ]

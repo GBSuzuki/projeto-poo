@@ -1,10 +1,10 @@
 [
   {
     "Id": "d5ca8c0f-9252-4c24-aa26-5d36ad6f7b96",
-    "NomeReceita": "cafecomleite",
+    "NomeReceita": "Café com Leite",
     "Ingredientes": {
-      "efc8a50b-dbf9-4d4c-9082-7408a9f7310e": 1,
-      "275d4521-a5e8-4c5d-858e-aeb24da708ad": 1
+      "93c926e8-e7d0-4718-99b2-2dde9a2d4bb0": 1,
+      "81751cf8-4736-45e7-9c5f-aef1cbb19d46": 1
     }
   }
 ]

@@ -22,6 +22,7 @@ public class Main extends Application {
 
         initRootLayout();
         addEstoqueTab();
+        addReceitasTab();
     }
 
     /**
@@ -48,7 +49,7 @@ public class Main extends Application {
     }
 
     /**
-     * Mostra o person overview dentro do root layout.
+     * Adiciona a tab de Receitas
      */
     public void addEstoqueTab() {
         try {
@@ -56,13 +57,32 @@ public class Main extends Application {
             FXMLLoader loader = new FXMLLoader();
             loader.setLocation(Main.class.getResource("view/Estoque.fxml"));
             loader.setControllerFactory(IoC.context::getInstance);
-            BorderPane receitasOverview = (BorderPane) loader.load();
+            BorderPane estoqueOverview = (BorderPane) loader.load();
 
             //Cria a tab 1 e define o conteudo do fxml.
             Tab tabEstoque = new Tab();
             tabEstoque.setText("Estoque");
-            tabEstoque.setContent(receitasOverview);
+            tabEstoque.setContent(estoqueOverview);
             rootTabPane.getTabs().add(tabEstoque);
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void addReceitasTab() {
+        try {
+            // Carrega o FXML do estoque.
+            FXMLLoader loader = new FXMLLoader();
+            loader.setLocation(Main.class.getResource("view/Receitas.fxml"));
+            loader.setControllerFactory(IoC.context::getInstance);
+            BorderPane receitasOverview = (BorderPane) loader.load();
+
+            //Cria a tab 1 e define o conteudo do fxml.
+            Tab tabReceitas = new Tab();
+            tabReceitas.setText("Receitas");
+            tabReceitas.setContent(receitasOverview);
+            rootTabPane.getTabs().add(tabReceitas);
 
         } catch (IOException e) {
             e.printStackTrace();

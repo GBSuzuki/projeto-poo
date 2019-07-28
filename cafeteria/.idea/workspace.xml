@@ -2,16 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9318db9a-586e-4cd1-94be-70059495064c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/domain/Remocao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/view/Receitas.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/view/ReceitasController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BancoReceitas.json" beforeDir="false" afterPath="$PROJECT_DIR$/BancoReceitas.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Estoque.json" beforeDir="false" afterPath="$PROJECT_DIR$/Estoque.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cafeteria.db" beforeDir="false" afterPath="$PROJECT_DIR$/cafeteria.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/cafeteria/view/CompraProduto.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/cafeteria/view/CompraProduto.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/service/TransacaoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/service/TransacaoService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/service/interfaces/ITranscaoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/service/interfaces/ITranscaoService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/view/CompraProduto.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/CompraProduto.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/view/CompraProduto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/CompraProdutoController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/view/Estoque.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/Estoque.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/service/BancoDeReceitas.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/service/BancoDeReceitas.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/service/interfaces/IBancoDeReceitas.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/service/interfaces/IBancoDeReceitas.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/view/EstoqueController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/EstoqueController.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -67,7 +66,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/libs/javafx" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/view" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -76,9 +75,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="view" />
       <recent name="domain" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\rapha\Documents\POO\projeto-poo\cafeteria\src\view" />
       <recent name="C:\Users\rapha\Documents\POO\projeto-poo\cafeteria\src" />
       <recent name="$PROJECT_DIR$/libs" />
       <recent name="$PROJECT_DIR$/out" />
@@ -145,7 +146,14 @@
       <option name="project" value="LOCAL" />
       <updated>1564320856631</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Botão para remover produto (reverter compra) implementado.">
+      <created>1564341469904</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1564341469904</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -168,7 +176,19 @@
     <MESSAGE value="Alteraçõess para rodar" />
     <MESSAGE value="Tentativa de implementação da GUI" />
     <MESSAGE value="Push da biblioteca JavaFX." />
-    <option name="LAST_COMMIT_MESSAGE" value="Push da biblioteca JavaFX." />
+    <MESSAGE value="Botão para remover produto (reverter compra) implementado." />
+    <option name="LAST_COMMIT_MESSAGE" value="Botão para remover produto (reverter compra) implementado." />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/domain/ProdutosFinais.java</url>
+          <line>30</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/cafeteria$Main.ic" NAME="Main Coverage Results" MODIFIED="1564092991834" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
