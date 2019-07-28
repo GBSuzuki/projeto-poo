@@ -1,12 +1,12 @@
 [
   {
-    "Id": "60941d24-6314-48b2-b601-55c5d0a3e333",
+    "Id": "efc8a50b-dbf9-4d4c-9082-7408a9f7310e",
     "Nome": "Cafe",
     "Quantidade": 5,
     "Preco": 4.0
   },
   {
-    "Id": "af1faf82-df27-45a5-9dfd-e202e4138ec3",
+    "Id": "275d4521-a5e8-4c5d-858e-aeb24da708ad",
     "Nome": "Leite",
     "Quantidade": 10,
     "Preco": 6.0

@@ -41,9 +41,9 @@ public class EstoqueController implements Initializable {
         preco.setCellValueFactory(new PropertyValueFactory<>("Preco"));
         qtd.setCellValueFactory(new PropertyValueFactory<>("Quantidade"));
 
-        EasyDI easyDI = new EasyDI();
-        easyDI.bindInterface(IEstoque.class, Estoque.class);
-        Estoque e = easyDI.getInstance(Estoque.class);
+        //EasyDI easyDI = new EasyDI();
+        //easyDI.bindInterface(IEstoque.class, Estoque.class);
+        //Estoque e = easyDI.getInstance(Estoque.class);
 
         ObservableList<MateriaPrima> Estoque = FXCollections.observableArrayList(
                 // Inserir cada materia prima aqui.
