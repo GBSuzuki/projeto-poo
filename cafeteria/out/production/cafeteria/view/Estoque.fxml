@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.BorderPane?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.EstoqueController">
+   <center>
+      <TableView fx:id="tbData" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+        <columns>
+          <TableColumn fx:id="uuid" prefWidth="75.0" text="UUID" />
+          <TableColumn fx:id="nome" prefWidth="75.0" text="Nome" />
+            <TableColumn fx:id="preco" prefWidth="75.0" text="Preço" />
+            <TableColumn fx:id="qtd" prefWidth="75.0" text="Quantidade" />
+        </columns>
+      </TableView>
+   </center>
+</BorderPane>

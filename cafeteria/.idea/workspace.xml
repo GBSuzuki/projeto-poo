@@ -1,18 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9318db9a-586e-4cd1-94be-70059495064c" name="Default Changelist" comment="Alteraçõess para rodar">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BancoReceitas.json" beforeDir="false" afterPath="$PROJECT_DIR$/BancoReceitas.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Estoque.json" beforeDir="false" afterPath="$PROJECT_DIR$/Estoque.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cafeteria.db" beforeDir="false" afterPath="$PROJECT_DIR$/cafeteria.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/domain/Compra.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/domain/Compra.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/domain/Venda.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/domain/Venda.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/domain/interfaces/ATransacao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/domain/interfaces/ATransacao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/service/TransacaoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/service/TransacaoService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/service/interfaces/ITranscaoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/service/interfaces/ITranscaoService.java" afterDir="false" />
-    </list>
+    <list default="true" id="9318db9a-586e-4cd1-94be-70059495064c" name="Default Changelist" comment="Tentativa de implementação da GUI" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,10 +11,31 @@
   <component name="CoverageViewManager">
     <option name="myElementSize" value="197" />
   </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="cafeteria" type="feb32156:DbDataSourceImpl" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Interface" />
+        <option value="FxmlFile" />
+        <option value="JavaFXApplication" />
         <option value="Class" />
       </list>
     </option>
@@ -38,15 +48,18 @@
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../RestaurantMgtSampleUI" />
     <property name="project.structure.last.edited" value="Modules" />
-    <property name="project.structure.proportion" value="0.0" />
-    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
-    <property name="settings.editor.selected.configurable" value="reference.settings.ide.settings.spelling" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\rapha\Documents\POO\projeto-poo\cafeteria\src" />
       <recent name="$PROJECT_DIR$/libs" />
       <recent name="$PROJECT_DIR$/out" />
       <recent name="$PROJECT_DIR$/src" />
@@ -89,8 +102,24 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1564004682064</updated>
+      <workItem from="1564232043710" duration="776000" />
+      <workItem from="1564233658942" duration="1823000" />
+      <workItem from="1564236032890" duration="517000" />
+      <workItem from="1564236566864" duration="204000" />
+      <workItem from="1564236817317" duration="15292000" />
     </task>
+    <task id="LOCAL-00001" summary="Tentativa de implementação da GUI">
+      <created>1564318970214</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1564318970214</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -107,18 +136,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Alteraçõess para rodar" />
-    <option name="LAST_COMMIT_MESSAGE" value="Alteraçõess para rodar" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/Main.java</url>
-          <line>41</line>
-          <option name="timeStamp" value="3" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <MESSAGE value="Tentativa de implementação da GUI" />
+    <option name="LAST_COMMIT_MESSAGE" value="Tentativa de implementação da GUI" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/cafeteria$Main.ic" NAME="Main Coverage Results" MODIFIED="1564092991834" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
