@@ -9,32 +9,28 @@ import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Tab;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
-import javafx.scene.layout.BorderPane;
-import javafx.stage.Modality;
 import javafx.stage.Stage;
-import javafx.stage.StageStyle;
-import service.Estoque;
 import service.interfaces.IEstoque;
+import service.interfaces.ITranscaoService;
 
 import javax.inject.Inject;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
-import java.util.UUID;
 
 public class EstoqueController implements Initializable {
+    private final ITranscaoService transacao;
 
     private final IEstoque estoque;
     private ObservableList<MateriaPrima> Estoque = FXCollections.observableArrayList();
 
     //Injeta o estoque
     @Inject
-    public EstoqueController(IEstoque estoque) {
-
+    public EstoqueController(IEstoque estoque, ITranscaoService transacao) {
+        this.transacao = transacao;
         this.estoque = estoque;
     }
 
@@ -64,11 +60,12 @@ public class EstoqueController implements Initializable {
         tbData.setItems(Estoque);
     }
 
-    public void reloadList(){
-        Estoque.removeIf(x->true);
+    public void reloadList() {
+        Estoque.removeIf(x -> true);
         Estoque.addAll(estoque.getMateriais());
     }
 
+    @FXML
     public void adicionarMP() {
         try {
             FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("CompraProduto.fxml"));
@@ -79,8 +76,18 @@ public class EstoqueController implements Initializable {
             stage.setScene(new Scene(root1));
             stage.show();
 
+            stage.setOnHiding(event -> {
+                reloadList();
+            });
+
         } catch (IOException e) {
             e.printStackTrace();
         }
+    }
+
+    @FXML
+    public void removeMP() {
+        transacao.removeCompra(tbData.getSelectionModel().getSelectedItem().getId());
+        reloadList();
     }
 }

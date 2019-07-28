@@ -2,8 +2,8 @@
   {
     "Id": "32501edf-b429-49e1-8085-df26ab21e98d",
     "Nome": "Cafe",
-    "Quantidade": 25,
-    "Preco": 4.0
+    "Quantidade": 45,
+    "Preco": 5.0
   },
   {
     "Id": "b73a0c63-9797-4cbb-a5a4-5f60b089f5fb",
@@ -12,27 +12,9 @@
     "Preco": 6.0
   },
   {
-    "Id": "baebd952-20b4-4e60-b952-1d93d9afc354",
-    "Nome": "Creme",
-    "Quantidade": 15,
-    "Preco": 8.0
-  },
-  {
     "Id": "ff5f3ec3-7ed5-45e7-949d-f3cd83c96772",
     "Nome": "Avelã",
     "Quantidade": 555,
     "Preco": 8.0
-  },
-  {
-    "Id": "4b244f6d-0440-4a03-a22c-2e7f089c2ddf",
-    "Nome": "Teste",
-    "Quantidade": 10,
-    "Preco": 4.5
-  },
-  {
-    "Id": "d636a472-cfde-4030-999b-0bf1319ce411",
-    "Nome": "Pão",
-    "Quantidade": 10,
-    "Preco": 0.5
   }
 ]

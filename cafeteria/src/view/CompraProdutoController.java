@@ -13,7 +13,7 @@ import service.interfaces.IPersistenceService;
 import service.interfaces.ITranscaoService;
 
 
-public class CompraProduto {
+public class CompraProdutoController {
     private final ITranscaoService transacao;
 
     @FXML
@@ -31,7 +31,7 @@ public class CompraProduto {
     @FXML
     private TextField fieldQuantidade;
 
-    public CompraProduto(ITranscaoService transacao) {
+    public CompraProdutoController(ITranscaoService transacao) {
         this.transacao = transacao;
     }
 

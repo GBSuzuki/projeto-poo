@@ -28,7 +28,7 @@
                   <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
                </VBox.margin>
             </Button>
-            <Button mnemonicParsing="false" text=" Remover Produto" textAlignment="CENTER" wrapText="true">
+            <Button mnemonicParsing="false" onAction="#removeMP" text=" Remover Produto" textAlignment="CENTER" wrapText="true">
                <VBox.margin>
                   <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
                </VBox.margin>

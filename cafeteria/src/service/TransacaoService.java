@@ -2,6 +2,7 @@ package service;
 
 import domain.Compra;
 import domain.Receita;
+import domain.Remocao;
 import domain.Venda;
 import domain.interfaces.ATransacao;
 import service.interfaces.IBancoDeReceitas;
@@ -61,6 +62,16 @@ public class TransacaoService implements ITranscaoService {
         try {
             estoque.AdicionaMP(compra.getNome(), compra.getQuantidade(), compra.getValor());
             insert(compra);
+            return true;
+        } catch (Exception ex) {
+            return false;
+        }
+    }
+
+    public boolean removeCompra(UUID Id) {
+        try {
+            estoque.RemoveMP(Id);
+            insert(new Remocao(estoque.getMP(Id).getNome(), estoque.getMP(Id).getQuantidade(), estoque.getMP(Id).getPreco()));
             return true;
         } catch (Exception ex) {
             return false;
