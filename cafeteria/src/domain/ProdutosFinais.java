@@ -3,10 +3,13 @@ package domain;
 import service.interfaces.IBancoDeReceitas;
 import service.interfaces.IEstoque;
 
+import javax.inject.Inject;
+import javax.inject.Singleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.UUID;
 
+@Singleton
 public class ProdutosFinais {
 
     private final IEstoque estoque;
@@ -15,6 +18,7 @@ public class ProdutosFinais {
      * disponível para ser produzida. */
     private Map<UUID, Integer> Produtos;
 
+    @Inject
     public ProdutosFinais(IEstoque estoque, IBancoDeReceitas bancoDeReceitas) {
         this.estoque = estoque;
         this.bancoDeReceitas = bancoDeReceitas;

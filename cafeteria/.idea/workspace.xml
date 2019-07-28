@@ -2,16 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9318db9a-586e-4cd1-94be-70059495064c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/view/Receitas.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/view/ReceitasController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BancoReceitas.json" beforeDir="false" afterPath="$PROJECT_DIR$/BancoReceitas.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Estoque.json" beforeDir="false" afterPath="$PROJECT_DIR$/Estoque.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cafeteria.db" beforeDir="false" afterPath="$PROJECT_DIR$/cafeteria.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/domain/ProdutosFinais.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/domain/ProdutosFinais.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/helpers/IoC.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/helpers/IoC.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/service/BancoDeReceitas.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/service/BancoDeReceitas.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/service/interfaces/IBancoDeReceitas.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/service/interfaces/IBancoDeReceitas.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/view/EstoqueController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/EstoqueController.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -184,7 +178,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/domain/ProdutosFinais.java</url>
-          <line>30</line>
+          <line>34</line>
           <option name="timeStamp" value="2" />
         </line-breakpoint>
       </breakpoints>

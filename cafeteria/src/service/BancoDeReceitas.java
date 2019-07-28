@@ -1,6 +1,5 @@
 package service;
 
-import helpers.IoC;
 import domain.ProdutosFinais;
 import domain.Receita;
 import service.interfaces.IBancoDeReceitas;
@@ -19,12 +18,13 @@ public class BancoDeReceitas implements IBancoDeReceitas {
     private final IEstoque estoque;
     private final IPersistenceService persistenceService;
     private ArrayList<Receita> Receitas;
-    private ProdutosFinais produtosFinais;
+    private final ProdutosFinais produtosFinais;
 
     @Inject
-    public BancoDeReceitas(IEstoque estoque, IPersistenceService persistenceService) {
+    public BancoDeReceitas(IEstoque estoque, IPersistenceService persistenceService, ProdutosFinais produtosFinais) {
         this.estoque = estoque;
         this.persistenceService = persistenceService;
+        this.produtosFinais = produtosFinais;
         Receitas = new ArrayList<>();
         Receitas = persistenceService.getBancoReceitas();
     }
