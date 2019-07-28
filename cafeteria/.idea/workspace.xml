@@ -2,13 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9318db9a-586e-4cd1-94be-70059495064c" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/view/CompraProduto.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/view/CompraProduto.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Estoque.json" beforeDir="false" afterPath="$PROJECT_DIR$/Estoque.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cafeteria.db" beforeDir="false" afterPath="$PROJECT_DIR$/cafeteria.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/cafeteria/view/Estoque.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/cafeteria/view/Estoque.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/domain/MateriaPrima.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/domain/MateriaPrima.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/service/Estoque.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/service/Estoque.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/service/PersistenceService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/service/PersistenceService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/view/Estoque.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/Estoque.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/view/EstoqueController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/EstoqueController.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -43,8 +44,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Interface" />
-        <option value="FxmlFile" />
         <option value="JavaFXApplication" />
+        <option value="FxmlFile" />
         <option value="Class" />
       </list>
     </option>
@@ -123,6 +124,7 @@
       <workItem from="1564236817317" duration="16565000" />
       <workItem from="1564320578456" duration="120000" />
       <workItem from="1564320758757" duration="715000" />
+      <workItem from="1564332347982" duration="2197000" />
     </task>
     <task id="LOCAL-00001" summary="Tentativa de implementação da GUI">
       <created>1564318970214</created>

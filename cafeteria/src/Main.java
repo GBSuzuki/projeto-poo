@@ -1,7 +1,4 @@
 import domain.Compra;
-import domain.MateriaPrima;
-import domain.Receita;
-import domain.Venda;
 import eu.lestard.easydi.EasyDI;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
@@ -20,7 +17,6 @@ import service.interfaces.IPersistenceService;
 import service.interfaces.ITranscaoService;
 
 import java.io.IOException;
-import java.sql.Timestamp;
 
 public class Main extends Application {
 
@@ -35,7 +31,6 @@ public class Main extends Application {
         this.primaryStage.setTitle("Cafeteria");
 
         initRootLayout();
-
         addEstoqueTab();
     }
 
@@ -67,7 +62,6 @@ public class Main extends Application {
      */
     public void addEstoqueTab() {
         try {
-
             // Carrega o FXML do estoque.
             FXMLLoader loader = new FXMLLoader();
             loader.setLocation(Main.class.getResource("view/Estoque.fxml"));
@@ -104,11 +98,11 @@ public class Main extends Application {
 //
 //        BancoDeReceitas a = context.getInstance(BancoDeReceitas.class);
 //        Estoque e = context.getInstance(Estoque.class);
-//        TransacaoService t = context.getInstance(TransacaoService.class);
+        TransacaoService t = context.getInstance(TransacaoService.class);
 //
 //        t.efetuaCompra(new Compra("Cafe", 5, 4));
 //        t.efetuaCompra(new Compra("Leite", 10, 6));
-//        t.efetuaCompra(new Compra("Creme", 15, 8));
+        t.efetuaCompra(new Compra("Avelã", 15, 8));
 
 //
 //        Receita cafecleite = new Receita("cafecomleite");

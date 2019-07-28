@@ -2,7 +2,7 @@
   {
     "Id": "32501edf-b429-49e1-8085-df26ab21e98d",
     "Nome": "Cafe",
-    "Quantidade": 5,
+    "Quantidade": 25,
     "Preco": 4.0
   },
   {
@@ -16,5 +16,17 @@
     "Nome": "Creme",
     "Quantidade": 15,
     "Preco": 8.0
+  },
+  {
+    "Id": "ff5f3ec3-7ed5-45e7-949d-f3cd83c96772",
+    "Nome": "Avelã",
+    "Quantidade": 555,
+    "Preco": 8.0
+  },
+  {
+    "Id": "4b244f6d-0440-4a03-a22c-2e7f089c2ddf",
+    "Nome": "Teste",
+    "Quantidade": 10,
+    "Preco": 4.5
   }
 ]
