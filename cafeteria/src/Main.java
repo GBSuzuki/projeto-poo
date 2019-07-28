@@ -103,18 +103,18 @@ public class Main extends Application {
 
     public static void main(String[] args) {
 
-//        EasyDI easyDI = new EasyDI();
-//        easyDI.bindInterface(IEstoque.class, Estoque.class);
-//        easyDI.bindInterface(IBancoDeReceitas.class, BancoDeReceitas.class);
-//        easyDI.bindInterface(ITranscaoService.class, TransacaoService.class);
-//        easyDI.bindInterface(IPersistenceService.class, PersistenceService.class);
+        EasyDI easyDI = new EasyDI();
+        easyDI.bindInterface(IEstoque.class, Estoque.class);
+        easyDI.bindInterface(IBancoDeReceitas.class, BancoDeReceitas.class);
+        easyDI.bindInterface(ITranscaoService.class, TransacaoService.class);
+        easyDI.bindInterface(IPersistenceService.class, PersistenceService.class);
 //
-//        BancoDeReceitas a = easyDI.getInstance(BancoDeReceitas.class);
-//        Estoque e = easyDI.getInstance(Estoque.class);
-//        TransacaoService t = easyDI.getInstance(TransacaoService.class);
+        BancoDeReceitas a = easyDI.getInstance(BancoDeReceitas.class);
+        Estoque e = easyDI.getInstance(Estoque.class);
+        TransacaoService t = easyDI.getInstance(TransacaoService.class);
 //
-//        t.efetuaCompra(new Compra("Cafe", 5, 4));
-//        t.efetuaCompra(new Compra("Leite", 10, 6));
+        t.efetuaCompra(new Compra("Cafe", 5, 4));
+        t.efetuaCompra(new Compra("Leite", 10, 6));
 //
 //        Receita cafecleite = new Receita("cafecomleite");
 //
