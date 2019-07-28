@@ -1,19 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9318db9a-586e-4cd1-94be-70059495064c" name="Default Changelist" comment="Tentativa de implementação da GUI">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/javafx.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/aopalliance.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/guava_27_1_jre.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/guice_4_2_2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/javax_inject.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/javax_inject__2_.xml" beforeDir="false" />
+    <list default="true" id="9318db9a-586e-4cd1-94be-70059495064c" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/libs/javafx/javafx-swt.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/libs/javafx/javafx.base.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/libs/javafx/javafx.controls.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/libs/javafx/javafx.fxml.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/libs/javafx/javafx.graphics.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/libs/javafx/javafx.media.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/libs/javafx/javafx.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/libs/javafx/javafx.swing.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/libs/javafx/javafx.web.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BancoReceitas.json" beforeDir="false" afterPath="$PROJECT_DIR$/BancoReceitas.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Estoque.json" beforeDir="false" afterPath="$PROJECT_DIR$/Estoque.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cafeteria.db" beforeDir="false" afterPath="$PROJECT_DIR$/cafeteria.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cafeteria.iml" beforeDir="false" afterPath="$PROJECT_DIR$/cafeteria.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/view/EstoqueController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/EstoqueController.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -54,6 +52,11 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="PREVIOUS_COMMIT_AUTHORS">
+      <list>
+        <option value="Raphael de Freitas &lt;raphaeldefreitas2009@gmail.com&gt;" />
+      </list>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="ProjectId" id="1OTbl5jUYY0Shdc382YZPPyOLEd" />
@@ -121,7 +124,7 @@
       <workItem from="1564236566864" duration="204000" />
       <workItem from="1564236817317" duration="16565000" />
       <workItem from="1564320578456" duration="120000" />
-      <workItem from="1564320758757" duration="57000" />
+      <workItem from="1564320758757" duration="715000" />
     </task>
     <task id="LOCAL-00001" summary="Tentativa de implementação da GUI">
       <created>1564318970214</created>
@@ -130,7 +133,14 @@
       <option name="project" value="LOCAL" />
       <updated>1564318970214</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Push da biblioteca JavaFX.">
+      <created>1564320856631</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1564320856631</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -152,7 +162,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Alteraçõess para rodar" />
     <MESSAGE value="Tentativa de implementação da GUI" />
-    <option name="LAST_COMMIT_MESSAGE" value="Tentativa de implementação da GUI" />
+    <MESSAGE value="Push da biblioteca JavaFX." />
+    <option name="LAST_COMMIT_MESSAGE" value="Push da biblioteca JavaFX." />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/cafeteria$Main.ic" NAME="Main Coverage Results" MODIFIED="1564092991834" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
