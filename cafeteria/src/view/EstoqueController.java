@@ -1,6 +1,7 @@
 package view;
 
 import domain.MateriaPrima;
+import helpers.IoC;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
@@ -16,6 +17,7 @@ import javafx.scene.layout.BorderPane;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
+import service.Estoque;
 import service.interfaces.IEstoque;
 
 import javax.inject.Inject;
@@ -62,9 +64,15 @@ public class EstoqueController implements Initializable {
         tbData.setItems(Estoque);
     }
 
+    public void reloadList(){
+        Estoque.removeIf(x->true);
+        Estoque.addAll(estoque.getMateriais());
+    }
+
     public void adicionarMP() {
         try {
             FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("CompraProduto.fxml"));
+            fxmlLoader.setControllerFactory(IoC.context::getInstance);
             Parent root1 = (Parent) fxmlLoader.load();
             Stage stage = new Stage();
             stage.setTitle("Comprar Produto");

@@ -1,5 +1,4 @@
-import domain.Compra;
-import eu.lestard.easydi.EasyDI;
+import helpers.IoC;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
@@ -7,14 +6,6 @@ import javafx.scene.control.Tab;
 import javafx.scene.control.TabPane;
 import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
-import service.BancoDeReceitas;
-import service.Estoque;
-import service.PersistenceService;
-import service.TransacaoService;
-import service.interfaces.IBancoDeReceitas;
-import service.interfaces.IEstoque;
-import service.interfaces.IPersistenceService;
-import service.interfaces.ITranscaoService;
 
 import java.io.IOException;
 
@@ -23,7 +14,6 @@ public class Main extends Application {
     private Stage primaryStage;
     private BorderPane rootLayout;
     private TabPane rootTabPane;
-    private static EasyDI context;
 
     @Override
     public void start(Stage primaryStage) {
@@ -44,7 +34,7 @@ public class Main extends Application {
             loader.setLocation(Main.class.getResource("view/RootLayout.fxml"));
 
             //fala para o loader utilizar o easydi para instanciar a classe
-            loader.setControllerFactory(context::getInstance);
+            loader.setControllerFactory(IoC.context::getInstance);
             rootLayout = (BorderPane) loader.load();
             rootTabPane = (TabPane) rootLayout.getCenter();
 
@@ -65,7 +55,7 @@ public class Main extends Application {
             // Carrega o FXML do estoque.
             FXMLLoader loader = new FXMLLoader();
             loader.setLocation(Main.class.getResource("view/Estoque.fxml"));
-            loader.setControllerFactory(context::getInstance);
+            loader.setControllerFactory(IoC.context::getInstance);
             BorderPane receitasOverview = (BorderPane) loader.load();
 
             //Cria a tab 1 e define o conteudo do fxml.
@@ -90,19 +80,13 @@ public class Main extends Application {
 
     public static void main(String[] args) {
 
-        context = new EasyDI();
-        context.bindInterface(IEstoque.class, Estoque.class);
-        context.bindInterface(IBancoDeReceitas.class, BancoDeReceitas.class);
-        context.bindInterface(ITranscaoService.class, TransacaoService.class);
-        context.bindInterface(IPersistenceService.class, PersistenceService.class);
-//
 //        BancoDeReceitas a = context.getInstance(BancoDeReceitas.class);
 //        Estoque e = context.getInstance(Estoque.class);
-        TransacaoService t = context.getInstance(TransacaoService.class);
+        //TransacaoService t = context.getInstance(TransacaoService.class);
 //
 //        t.efetuaCompra(new Compra("Cafe", 5, 4));
 //        t.efetuaCompra(new Compra("Leite", 10, 6));
-        t.efetuaCompra(new Compra("Avelã", 15, 8));
+        //t.efetuaCompra(new Compra("Avelã", 15, 8));
 
 //
 //        Receita cafecleite = new Receita("cafecomleite");

@@ -28,5 +28,11 @@
     "Nome": "Teste",
     "Quantidade": 10,
     "Preco": 4.5
+  },
+  {
+    "Id": "d636a472-cfde-4030-999b-0bf1319ce411",
+    "Nome": "Pão",
+    "Quantidade": 10,
+    "Preco": 0.5
   }
 ]

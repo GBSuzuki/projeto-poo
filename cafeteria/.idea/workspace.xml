@@ -2,14 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9318db9a-586e-4cd1-94be-70059495064c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/view/CompraProduto.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/view/CompraProduto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/helpers/IoC.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Estoque.json" beforeDir="false" afterPath="$PROJECT_DIR$/Estoque.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cafeteria.db" beforeDir="false" afterPath="$PROJECT_DIR$/cafeteria.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/cafeteria/view/Estoque.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/cafeteria/view/Estoque.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/view/Estoque.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/Estoque.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/helpers/jsonKIT.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/view/CompraProduto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/CompraProduto.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/view/EstoqueController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/EstoqueController.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
