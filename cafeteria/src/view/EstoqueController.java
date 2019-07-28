@@ -1,7 +1,6 @@
 package view;
 
 import domain.MateriaPrima;
-import eu.lestard.easydi.EasyDI;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
@@ -9,15 +8,24 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
-import service.Estoque;
 import service.interfaces.IEstoque;
-import service.interfaces.IPersistenceService;
 
+import javax.inject.Inject;
 import java.net.URL;
 import java.util.ResourceBundle;
 import java.util.UUID;
 
 public class EstoqueController implements Initializable {
+
+    private final IEstoque estoque;
+
+    //Injeta o estoque
+    @Inject
+    public EstoqueController(IEstoque estoque){
+
+        this.estoque = estoque;
+    }
+
     @FXML
     private TableView<MateriaPrima> tbData;
 
@@ -48,6 +56,9 @@ public class EstoqueController implements Initializable {
         ObservableList<MateriaPrima> Estoque = FXCollections.observableArrayList(
                 // Inserir cada materia prima aqui.
         );
+
+        //utiliza o estoque injetado para obter os materiais
+        Estoque.addAll(estoque.getMateriais());
 
         //add your data to the table here.
         tbData.setItems(Estoque);

@@ -27,11 +27,19 @@ public class Main extends Application {
     private Stage primaryStage;
     private BorderPane rootLayout;
     private TabPane rootTabPane;
+    private EasyDI context;
 
     @Override
     public void start(Stage primaryStage) {
         this.primaryStage = primaryStage;
         this.primaryStage.setTitle("Cafeteria");
+
+        //Inicia um easyDI e cria os bindigs para a injeção
+        context = new EasyDI();
+        context.bindInterface(IEstoque.class, Estoque.class);
+        context.bindInterface(IBancoDeReceitas.class, BancoDeReceitas.class);
+        context.bindInterface(ITranscaoService.class, TransacaoService.class);
+        context.bindInterface(IPersistenceService.class, PersistenceService.class);
 
         initRootLayout();
 
@@ -46,6 +54,9 @@ public class Main extends Application {
             // Carrega o root layout do arquivo fxml.
             FXMLLoader loader = new FXMLLoader();
             loader.setLocation(Main.class.getResource("view/RootLayout.fxml"));
+
+            //fala para o loader utilizar o easydi para instanciar a classe
+            loader.setControllerFactory(context::getInstance);
             rootLayout = (BorderPane) loader.load();
             rootTabPane = (TabPane) rootLayout.getCenter();
 
@@ -67,6 +78,7 @@ public class Main extends Application {
             // Carrega o FXML do estoque.
             FXMLLoader loader = new FXMLLoader();
             loader.setLocation(Main.class.getResource("view/Estoque.fxml"));
+            loader.setControllerFactory(context::getInstance);
             BorderPane receitasOverview = (BorderPane) loader.load();
 
             //Cria a tab 1 e define o conteudo do fxml.
@@ -91,30 +103,30 @@ public class Main extends Application {
 
     public static void main(String[] args) {
 
-        EasyDI easyDI = new EasyDI();
-        easyDI.bindInterface(IEstoque.class, Estoque.class);
-        easyDI.bindInterface(IBancoDeReceitas.class, BancoDeReceitas.class);
-        easyDI.bindInterface(ITranscaoService.class, TransacaoService.class);
-        easyDI.bindInterface(IPersistenceService.class, PersistenceService.class);
-
-        BancoDeReceitas a = easyDI.getInstance(BancoDeReceitas.class);
-        Estoque e = easyDI.getInstance(Estoque.class);
-        TransacaoService t = easyDI.getInstance(TransacaoService.class);
-
-        t.efetuaCompra(new Compra("Cafe", 5, 4));
-        t.efetuaCompra(new Compra("Leite", 10, 6));
-
-        Receita cafecleite = new Receita("cafecomleite");
-
-        cafecleite.addIngrediente(e.getMP("Cafe").getId(), 1);
-        cafecleite.addIngrediente(e.getMP("Leite").getId(), 1);
-
-        a.AdicionaReceita(cafecleite);
-
-        t.efetuaVenda(new Venda("cafecomleite", 1, 15));
-
-        var co = t.getCompras(new Timestamp(System.currentTimeMillis()));
-        var ce = t.getVendas(new Timestamp(System.currentTimeMillis()));
+//        EasyDI easyDI = new EasyDI();
+//        easyDI.bindInterface(IEstoque.class, Estoque.class);
+//        easyDI.bindInterface(IBancoDeReceitas.class, BancoDeReceitas.class);
+//        easyDI.bindInterface(ITranscaoService.class, TransacaoService.class);
+//        easyDI.bindInterface(IPersistenceService.class, PersistenceService.class);
+//
+//        BancoDeReceitas a = easyDI.getInstance(BancoDeReceitas.class);
+//        Estoque e = easyDI.getInstance(Estoque.class);
+//        TransacaoService t = easyDI.getInstance(TransacaoService.class);
+//
+//        t.efetuaCompra(new Compra("Cafe", 5, 4));
+//        t.efetuaCompra(new Compra("Leite", 10, 6));
+//
+//        Receita cafecleite = new Receita("cafecomleite");
+//
+//        cafecleite.addIngrediente(e.getMP("Cafe").getId(), 1);
+//        cafecleite.addIngrediente(e.getMP("Leite").getId(), 1);
+//
+//        a.AdicionaReceita(cafecleite);
+//
+//        t.efetuaVenda(new Venda("cafecomleite", 1, 15));
+//
+//        var co = t.getCompras(new Timestamp(System.currentTimeMillis()));
+//        var ce = t.getVendas(new Timestamp(System.currentTimeMillis()));
 
         launch(args);
     }
