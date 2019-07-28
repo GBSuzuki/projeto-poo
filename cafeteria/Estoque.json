@@ -1,14 +1,20 @@
 [
   {
-    "Id": "08465de9-ad16-48eb-a556-ed8315c9e9c4",
+    "Id": "32501edf-b429-49e1-8085-df26ab21e98d",
     "Nome": "Cafe",
     "Quantidade": 5,
     "Preco": 4.0
   },
   {
-    "Id": "2ccade96-b326-46bb-821d-0ddb9c0b09aa",
+    "Id": "b73a0c63-9797-4cbb-a5a4-5f60b089f5fb",
     "Nome": "Leite",
     "Quantidade": 10,
     "Preco": 6.0
+  },
+  {
+    "Id": "baebd952-20b4-4e60-b952-1d93d9afc354",
+    "Nome": "Creme",
+    "Quantidade": 15,
+    "Preco": 8.0
   }
 ]

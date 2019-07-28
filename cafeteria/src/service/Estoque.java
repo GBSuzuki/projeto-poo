@@ -19,8 +19,6 @@ public class Estoque implements IEstoque {
     @Inject
     public Estoque(IPersistenceService persistenceService) {
         this.persistenceService = persistenceService;
-        Materiais = new ArrayList<>();
-
         //Carregar dados do json em Materiais
         Materiais = persistenceService.getEstoque();
     }

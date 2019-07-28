@@ -44,7 +44,7 @@ public class EstoqueController implements Initializable {
     @Override
     public void initialize(URL location, ResourceBundle resources) {
 
-        uuid.setCellValueFactory(new PropertyValueFactory<>("UUID"));
+        uuid.setCellValueFactory(new PropertyValueFactory<>("Id"));
         nome.setCellValueFactory(new PropertyValueFactory<>("Nome"));
         preco.setCellValueFactory(new PropertyValueFactory<>("Preco"));
         qtd.setCellValueFactory(new PropertyValueFactory<>("Quantidade"));

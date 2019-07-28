@@ -27,19 +27,12 @@ public class Main extends Application {
     private Stage primaryStage;
     private BorderPane rootLayout;
     private TabPane rootTabPane;
-    private EasyDI context;
+    private static EasyDI context;
 
     @Override
     public void start(Stage primaryStage) {
         this.primaryStage = primaryStage;
         this.primaryStage.setTitle("Cafeteria");
-
-        //Inicia um easyDI e cria os bindigs para a injeção
-        context = new EasyDI();
-        context.bindInterface(IEstoque.class, Estoque.class);
-        context.bindInterface(IBancoDeReceitas.class, BancoDeReceitas.class);
-        context.bindInterface(ITranscaoService.class, TransacaoService.class);
-        context.bindInterface(IPersistenceService.class, PersistenceService.class);
 
         initRootLayout();
 
@@ -103,18 +96,20 @@ public class Main extends Application {
 
     public static void main(String[] args) {
 
-        EasyDI easyDI = new EasyDI();
-        easyDI.bindInterface(IEstoque.class, Estoque.class);
-        easyDI.bindInterface(IBancoDeReceitas.class, BancoDeReceitas.class);
-        easyDI.bindInterface(ITranscaoService.class, TransacaoService.class);
-        easyDI.bindInterface(IPersistenceService.class, PersistenceService.class);
+        context = new EasyDI();
+        context.bindInterface(IEstoque.class, Estoque.class);
+        context.bindInterface(IBancoDeReceitas.class, BancoDeReceitas.class);
+        context.bindInterface(ITranscaoService.class, TransacaoService.class);
+        context.bindInterface(IPersistenceService.class, PersistenceService.class);
 //
-        BancoDeReceitas a = easyDI.getInstance(BancoDeReceitas.class);
-        Estoque e = easyDI.getInstance(Estoque.class);
-        TransacaoService t = easyDI.getInstance(TransacaoService.class);
+//        BancoDeReceitas a = context.getInstance(BancoDeReceitas.class);
+//        Estoque e = context.getInstance(Estoque.class);
+//        TransacaoService t = context.getInstance(TransacaoService.class);
 //
-        t.efetuaCompra(new Compra("Cafe", 5, 4));
-        t.efetuaCompra(new Compra("Leite", 10, 6));
+//        t.efetuaCompra(new Compra("Cafe", 5, 4));
+//        t.efetuaCompra(new Compra("Leite", 10, 6));
+//        t.efetuaCompra(new Compra("Creme", 15, 8));
+
 //
 //        Receita cafecleite = new Receita("cafecomleite");
 //

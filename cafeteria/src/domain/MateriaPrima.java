@@ -23,6 +23,10 @@ public class MateriaPrima {
         return Id;
     }
 
+    public void setId(UUID id) {
+        Id = id;
+    }
+
     public String getNome() {
         return Nome;
     }
@@ -31,16 +35,20 @@ public class MateriaPrima {
         Nome = nome;
     }
 
+    public int getQuantidade() {
+        return Quantidade;
+    }
+
+    public void setQuantidade(int quantidade) {
+        Quantidade = quantidade;
+    }
+
     public float getPreco() {
         return Preco;
     }
 
     public void setPreco(float preco) {
         Preco = preco;
-    }
-
-    public int getQuantidade() {
-        return Quantidade;
     }
 
     public void updateQuantidade(int quantidade) {

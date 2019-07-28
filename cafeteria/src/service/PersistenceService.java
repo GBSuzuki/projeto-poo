@@ -11,18 +11,20 @@ import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.concurrent.atomic.AtomicReferenceArray;
 
 public class PersistenceService implements IPersistenceService {
     @Override
     public ArrayList<MateriaPrima> getEstoque() {
-        return getJson("Estoque.json", MateriaPrima.class);
+        return getJsonEstoque("Estoque.json");
     }
 
     @Override
     public ArrayList<Receita> getBancoReceitas() {
-        return getJson("BancoReceitas.json", Receita.class);
+        return getJsonReceitas("BancoReceitas.json");
     }
 
     @Override
@@ -50,17 +52,34 @@ public class PersistenceService implements IPersistenceService {
         }
     }
 
-    private <TOut extends Object> ArrayList<TOut> getJson(String arquivo, Class<TOut> type)
+    private ArrayList<Receita> getJsonReceitas(String arquivo)
     {
         Gson gson = new Gson();
-        ArrayList<TOut> obj = null;
+        ArrayList<Receita> obj = null;
         try {
+            var fooType = new TypeToken<ArrayList<Receita>>() {}.getType();
             BufferedReader br = new BufferedReader(new FileReader(arquivo));
-            obj = gson.fromJson(br, obj.getClass());
+            obj = gson.fromJson(br, fooType);
         }
         finally {
             if(obj == null)
-                return new ArrayList<TOut>();
+                return new ArrayList<Receita>();
+            return obj;
+        }
+    }
+
+    private ArrayList<MateriaPrima> getJsonEstoque(String arquivo)
+    {
+        Gson gson = new Gson();
+        ArrayList<MateriaPrima> obj = null;
+        try {
+            var fooType = new TypeToken<ArrayList<MateriaPrima>>() {}.getType();
+            BufferedReader br = new BufferedReader(new FileReader(arquivo));
+            obj = gson.fromJson(br, fooType);
+        }
+        finally {
+            if(obj == null)
+                return new ArrayList<MateriaPrima>();
             return obj;
         }
     }
