@@ -2,18 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9318db9a-586e-4cd1-94be-70059495064c" name="Default Changelist" comment="Tentativa de implementação da GUI">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/javafx.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/aopalliance.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/guava_27_1_jre.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/guice_4_2_2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/javax_inject.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/javax_inject__2_.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BancoReceitas.json" beforeDir="false" afterPath="$PROJECT_DIR$/BancoReceitas.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Estoque.json" beforeDir="false" afterPath="$PROJECT_DIR$/Estoque.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cafeteria.db" beforeDir="false" afterPath="$PROJECT_DIR$/cafeteria.db" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cafeteria.iml" beforeDir="false" afterPath="$PROJECT_DIR$/cafeteria.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/view/EstoqueController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/EstoqueController.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -63,7 +54,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/libs/javafx" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
