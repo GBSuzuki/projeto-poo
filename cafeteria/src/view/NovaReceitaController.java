@@ -21,16 +21,18 @@ import service.interfaces.ITranscaoService;
 import javax.inject.Inject;
 import java.io.IOException;
 import java.net.URL;
-import java.util.ArrayList;
-import java.util.Map;
-import java.util.ResourceBundle;
-import java.util.UUID;
+import java.util.*;
 
 public class NovaReceitaController implements Initializable {
     private final ITranscaoService transacao;
     private final IEstoque estoque;
     private final IBancoDeReceitas receitas;
     private ArrayList<MateriaPrima> selProdutos = new ArrayList<>();
+    public static Map<MateriaPrima, String> IngredientesNovaReceita;
+
+    static {
+        IngredientesNovaReceita = new HashMap<>();
+    }
 
     //Injeta o estoque
     @Inject
@@ -38,6 +40,7 @@ public class NovaReceitaController implements Initializable {
         this.transacao = transacao;
         this.estoque = estoque;
         this.receitas = receitas;
+        IngredientesNovaReceita = new HashMap<>();
     }
 
     @FXML
@@ -60,6 +63,10 @@ public class NovaReceitaController implements Initializable {
     public void reloadList() {
         tbData.getItems().clear();
         tbData.getItems().addAll(selProdutos);
+        for(var a : IngredientesNovaReceita.keySet())
+        {
+            tbData.getItems().add(a);
+        }
     }
 
     @FXML

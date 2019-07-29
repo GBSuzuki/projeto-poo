@@ -42,16 +42,9 @@ public class ReceitasController implements Initializable {
     @FXML
     TableColumn<Receita, String> qtd;
 
-    public static Map<UUID, Integer> IngredientesNovaReceita;
-
-    static {
-        IngredientesNovaReceita = new HashMap<>();
-    }
-
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         receitas.attDisp();
-        IngredientesNovaReceita = new HashMap<>();
         nome.setCellValueFactory(c -> new SimpleStringProperty(c.getValue().getNomeReceita()));
         preco.setCellValueFactory(c -> new SimpleStringProperty(
                 Float.toString(receitas.ObterPreco(c.getValue().getNomeReceita())))

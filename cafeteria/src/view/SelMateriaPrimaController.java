@@ -56,5 +56,9 @@ public class SelMateriaPrimaController implements Initializable {
 
     @FXML
     public void inserirMP(){
+        NovaReceitaController.IngredientesNovaReceita.put(
+                estoque.getMP(fieldMP.getText()),
+                fielQtd.getText()
+        );
     }
 }
