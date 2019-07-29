@@ -56,6 +56,5 @@ public class SelMateriaPrimaController implements Initializable {
 
     @FXML
     public void inserirMP(){
-
     }
 }

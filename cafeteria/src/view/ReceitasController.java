@@ -17,7 +17,7 @@ import service.interfaces.ITranscaoService;
 import javax.inject.Inject;
 import java.io.IOException;
 import java.net.URL;
-import java.util.ResourceBundle;
+import java.util.*;
 
 public class ReceitasController implements Initializable {
     private final ITranscaoService transacao;
@@ -41,6 +41,12 @@ public class ReceitasController implements Initializable {
 
     @FXML
     TableColumn<Receita, String> qtd;
+
+    public static Map<UUID, Integer> IngredientesNovaReceita;
+
+    static {
+        IngredientesNovaReceita = new HashMap<>();
+    }
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
