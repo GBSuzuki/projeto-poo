@@ -1,11 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9318db9a-586e-4cd1-94be-70059495064c" name="Default Changelist" comment="">
+    <list default="true" id="9318db9a-586e-4cd1-94be-70059495064c" name="Default Changelist" comment="Botão para remover produto (reverter compra) implementado.">
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/controlsfx_11_0_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/libs/controlsfx-11.0.0.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/view/NovaReceita.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/view/NovaReceitaController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/view/SelMateriaPrima.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/view/SelMateriaPrimaController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/domain/ProdutosFinais.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/domain/ProdutosFinais.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BancoReceitas.json" beforeDir="false" afterPath="$PROJECT_DIR$/BancoReceitas.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Estoque.json" beforeDir="false" afterPath="$PROJECT_DIR$/Estoque.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cafeteria.db" beforeDir="false" afterPath="$PROJECT_DIR$/cafeteria.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cafeteria.iml" beforeDir="false" afterPath="$PROJECT_DIR$/cafeteria.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/domain/ProdutosFinais.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/helpers/IoC.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/helpers/IoC.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/service/BancoDeReceitas.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/service/BancoDeReceitas.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/view/Receitas.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/Receitas.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/view/ReceitasController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/ReceitasController.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -27,12 +39,7 @@
     <option name="HIDDEN_KINDS">
       <set />
     </option>
-    <expand>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="cafeteria" type="feb32156:DbDataSourceImpl" />
-      </path>
-    </expand>
+    <expand />
     <select />
   </component>
   <component name="FileTemplateManagerImpl">
@@ -61,11 +68,11 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/src/view" />
-    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="settings.editor.selected.configurable" value="preferences.JavaFX" />
   </component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
@@ -92,7 +99,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.Main">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="cafeteria" />
@@ -100,6 +107,14 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="controlsfx-11.0.0.jar" type="JarApplication">
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Application.Main" />
+      <item itemvalue="JAR Application.controlsfx-11.0.0.jar" />
+    </list>
     <recent_temporary>
       <list>
         <item itemvalue="Application.Main" />
@@ -125,6 +140,7 @@
       <workItem from="1564320578456" duration="120000" />
       <workItem from="1564320758757" duration="715000" />
       <workItem from="1564332347982" duration="2197000" />
+      <workItem from="1564353497921" duration="11058000" />
     </task>
     <task id="LOCAL-00001" summary="Tentativa de implementação da GUI">
       <created>1564318970214</created>
@@ -172,17 +188,6 @@
     <MESSAGE value="Push da biblioteca JavaFX." />
     <MESSAGE value="Botão para remover produto (reverter compra) implementado." />
     <option name="LAST_COMMIT_MESSAGE" value="Botão para remover produto (reverter compra) implementado." />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/domain/ProdutosFinais.java</url>
-          <line>34</line>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/cafeteria$Main.ic" NAME="Main Coverage Results" MODIFIED="1564092991834" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />

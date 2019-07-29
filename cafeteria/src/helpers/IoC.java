@@ -1,6 +1,5 @@
 package helpers;
 
-import domain.ProdutosFinais;
 import eu.lestard.easydi.EasyDI;
 import service.BancoDeReceitas;
 import service.Estoque;
@@ -19,6 +18,5 @@ public class IoC {
         context.bindInterface(IBancoDeReceitas .class, BancoDeReceitas .class);
         context.bindInterface(ITranscaoService .class, TransacaoService .class);
         context.bindInterface(IPersistenceService .class, PersistenceService .class);
-        context.bindInstance(ProdutosFinais.class, context.getInstance(ProdutosFinais.class));
     }
 }
