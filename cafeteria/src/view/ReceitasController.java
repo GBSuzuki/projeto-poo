@@ -46,8 +46,7 @@ public class ReceitasController implements Initializable {
     public void initialize(URL location, ResourceBundle resources) {
         receitas.attDisp();
         nome.setCellValueFactory(c -> new SimpleStringProperty(c.getValue().getNomeReceita()));
-        preco.setCellValueFactory(c -> new SimpleStringProperty(
-                Float.toString(receitas.ObterPreco(c.getValue().getNomeReceita())))
+        preco.setCellValueFactory(c -> new SimpleStringProperty(Float.toString(receitas.ObterPreco(c.getValue().getNomeReceita())))
         );
         qtd.setCellValueFactory(c -> new SimpleStringProperty(Integer.toString(receitas.obterDisp(c.getValue().getId()))));
 

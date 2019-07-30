@@ -1,9 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9318db9a-586e-4cd1-94be-70059495064c" name="Default Changelist" comment="Botão para remover produto (reverter compra) implementado.">
+    <list default="true" id="9318db9a-586e-4cd1-94be-70059495064c" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BancoReceitas.json" beforeDir="false" afterPath="$PROJECT_DIR$/BancoReceitas.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/cafeteria/view/NovaReceita.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/cafeteria/view/NovaReceita.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/cafeteria/view/SelMateriaPrima.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/cafeteria/view/SelMateriaPrima.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/view/NovaReceita.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/NovaReceita.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/view/NovaReceitaController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/NovaReceitaController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/view/ReceitasController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/ReceitasController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/view/SelMateriaPrima.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/SelMateriaPrima.fxml" afterDir="false" />
@@ -97,17 +100,32 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="TableViewSample" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="view.TableViewSample" />
+      <module name="cafeteria" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="view.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="controlsfx-11.0.0.jar" type="JarApplication">
       <option name="ALTERNATIVE_JRE_PATH" />
       <method v="2" />
     </configuration>
     <list>
       <item itemvalue="Application.Main" />
+      <item itemvalue="Application.TableViewSample" />
       <item itemvalue="JAR Application.controlsfx-11.0.0.jar" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="Application.Main" />
+        <item itemvalue="Application.TableViewSample" />
       </list>
     </recent_temporary>
   </component>
@@ -131,6 +149,9 @@
       <workItem from="1564320758757" duration="715000" />
       <workItem from="1564332347982" duration="2197000" />
       <workItem from="1564353497921" duration="11058000" />
+      <workItem from="1564515273156" duration="4878000" />
+      <workItem from="1564521200672" duration="334000" />
+      <workItem from="1564521557451" duration="5442000" />
     </task>
     <task id="LOCAL-00001" summary="Tentativa de implementação da GUI">
       <created>1564318970214</created>
@@ -153,7 +174,14 @@
       <option name="project" value="LOCAL" />
       <updated>1564341469904</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Janela de seleção de MP com botões funcionais, necessário correção de tabela para exibir quantidade na janela de criar receita.">
+      <created>1564458271890</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1564458271890</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -177,21 +205,8 @@
     <MESSAGE value="Tentativa de implementação da GUI" />
     <MESSAGE value="Push da biblioteca JavaFX." />
     <MESSAGE value="Botão para remover produto (reverter compra) implementado." />
-    <option name="LAST_COMMIT_MESSAGE" value="Botão para remover produto (reverter compra) implementado." />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/view/NovaReceitaController.java</url>
-          <line>57</line>
-          <properties>
-            <option name="lambda-ordinal" value="-1" />
-          </properties>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <MESSAGE value="Janela de seleção de MP com botões funcionais, necessário correção de tabela para exibir quantidade na janela de criar receita." />
+    <option name="LAST_COMMIT_MESSAGE" value="Janela de seleção de MP com botões funcionais, necessário correção de tabela para exibir quantidade na janela de criar receita." />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/cafeteria$Main.ic" NAME="Main Coverage Results" MODIFIED="1564092991834" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
