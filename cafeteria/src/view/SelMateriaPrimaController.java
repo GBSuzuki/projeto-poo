@@ -1,4 +1,5 @@
 package view;
+import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import org.controlsfx.control.textfield.TextFields;
 
@@ -37,7 +38,14 @@ public class SelMateriaPrimaController implements Initializable {
     @FXML
     private TextField fieldMP;
 
-    @FXML TextField fielQtd;
+    @FXML
+    TextField fielQtd;
+
+    @FXML
+    private Button botaoCancelar;
+
+    @FXML
+    private Button botaoAdicionar;
 
     @Inject
     public SelMateriaPrimaController(IEstoque estoque) {
@@ -55,10 +63,19 @@ public class SelMateriaPrimaController implements Initializable {
     }
 
     @FXML
-    public void inserirMP(){
+    public void botaoAdicionar(){
         NovaReceitaController.IngredientesNovaReceita.put(
                 estoque.getMP(fieldMP.getText()),
                 fielQtd.getText()
         );
+
+        Stage stage = (Stage) botaoAdicionar.getScene().getWindow();
+        stage.close();
+    }
+
+    @FXML
+    private void botaoCancelar(){
+        Stage stage = (Stage) botaoCancelar.getScene().getWindow();
+        stage.close();
     }
 }

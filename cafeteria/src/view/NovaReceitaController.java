@@ -1,11 +1,8 @@
 package view;
 
 import domain.MateriaPrima;
-import domain.Receita;
 import helpers.IoC;
 import javafx.beans.property.SimpleStringProperty;
-import javafx.collections.FXCollections;
-import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
@@ -21,13 +18,15 @@ import service.interfaces.ITranscaoService;
 import javax.inject.Inject;
 import java.io.IOException;
 import java.net.URL;
-import java.util.*;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.ResourceBundle;
 
 public class NovaReceitaController implements Initializable {
     private final ITranscaoService transacao;
     private final IEstoque estoque;
     private final IBancoDeReceitas receitas;
-    private ArrayList<MateriaPrima> selProdutos = new ArrayList<>();
+    //private ArrayList<MateriaPrima> selProdutos = new ArrayList<>();
     public static Map<MateriaPrima, String> IngredientesNovaReceita;
 
     static {
@@ -50,21 +49,23 @@ public class NovaReceitaController implements Initializable {
     public TableColumn<MateriaPrima, String> produtos;
 
     @FXML
-    TableColumn<MateriaPrima, String> qtd;
+    public TableColumn<String, String> qtd;
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        produtos.setCellValueFactory(c -> new SimpleStringProperty(c.getValue().getNome()));
-        qtd.setCellValueFactory(c -> new SimpleStringProperty(Integer.toString(c.getValue().getQuantidade())));
 
-        tbData.getItems().addAll(selProdutos);
+        produtos.setCellValueFactory(c -> new SimpleStringProperty(c.getValue().getNome()));
+        //qtd.setCellValueFactory(c -> new SimpleStringProperty(c.getValue()));
+
+        for (var a : IngredientesNovaReceita.keySet()) {
+            tbData.getItems().add(a);
+        }
     }
 
     public void reloadList() {
         tbData.getItems().clear();
-        tbData.getItems().addAll(selProdutos);
-        for(var a : IngredientesNovaReceita.keySet())
-        {
+        //tbData.getItems().addAll(selProdutos);
+        for (var a : IngredientesNovaReceita.keySet()) {
             tbData.getItems().add(a);
         }
     }
@@ -91,7 +92,7 @@ public class NovaReceitaController implements Initializable {
 
     @FXML
     public void removeMP() {
-        selProdutos.removeIf(x -> x.getId().equals(tbData.getSelectionModel().getSelectedItem().getId()));
+        //selProdutos.removeIf(x -> x.getId().equals(tbData.getSelectionModel().getSelectedItem().getId()));
         reloadList();
     }
 }

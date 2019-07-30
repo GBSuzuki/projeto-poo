@@ -14,8 +14,8 @@
    <bottom>
       <ToolBar nodeOrientation="RIGHT_TO_LEFT" prefHeight="40.0" prefWidth="200.0" BorderPane.alignment="CENTER">
         <items>
-          <Button mnemonicParsing="false" onAction="#inserirMP" text="Inserir" />
-            <Button mnemonicParsing="false" text="Cancelar" />
+          <Button fx:id="botaoAdicionar" mnemonicParsing="false" onAction="#botaoAdicionar" text="Inserir" />
+            <Button fx:id="botaoCancelar" mnemonicParsing="false" onAction="#botaoCancelar" text="Cancelar" />
         </items>
       </ToolBar>
    </bottom>
