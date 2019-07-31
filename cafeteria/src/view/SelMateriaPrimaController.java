@@ -37,7 +37,6 @@ public class SelMateriaPrimaController implements Initializable {
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-
         for (MateriaPrima x : estoque.getMateriais()) {
             mps.add(x.getNome());
         }
@@ -46,15 +45,18 @@ public class SelMateriaPrimaController implements Initializable {
     }
 
     @FXML
-    public void botaoAdicionar(){
-        NovaReceitaController.IngredientesNovaReceita.add(new NovaReceitaController.NovoMP(fieldMP.getText(), fielQtd.getText()));
+    public void botaoAdicionar() {
+        if (!fieldMP.getText().isEmpty() && !fielQtd.getText().isEmpty()) {
+            NovaReceitaController.IngredientesNovaReceita.removeIf(x -> x.getProduto().equals(fieldMP.getText()));
+            NovaReceitaController.IngredientesNovaReceita.add(new NovaReceitaController.NovoMP(fieldMP.getText(), fielQtd.getText()));
 
-        Stage stage = (Stage) botaoAdicionar.getScene().getWindow();
-        stage.close();
+            Stage stage = (Stage) botaoAdicionar.getScene().getWindow();
+            stage.close();
+        }
     }
 
     @FXML
-    private void botaoCancelar(){
+    private void botaoCancelar() {
         Stage stage = (Stage) botaoCancelar.getScene().getWindow();
         stage.close();
     }

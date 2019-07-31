@@ -59,6 +59,7 @@ public class BancoDeReceitas implements IBancoDeReceitas {
     }
 
     public void AdicionaReceita(Receita receita) {
+        Receitas.removeIf(x -> x.getNomeReceita().equals(receita.getNomeReceita()));
         Receitas.add(receita);
         persistenceService.setBancoReceitas(Receitas);
     }

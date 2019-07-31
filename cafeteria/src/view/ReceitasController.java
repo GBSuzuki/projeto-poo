@@ -12,6 +12,7 @@ import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.stage.Stage;
 import service.interfaces.IBancoDeReceitas;
+import service.interfaces.IEstoque;
 import service.interfaces.ITranscaoService;
 
 import javax.inject.Inject;
@@ -22,12 +23,14 @@ import java.util.ResourceBundle;
 public class ReceitasController implements Initializable {
     private final ITranscaoService transacao;
     private final IBancoDeReceitas receitas;
+    private final IEstoque estoque;
 
     //Injeta o estoque
     @Inject
-    public ReceitasController(IBancoDeReceitas receitas, ITranscaoService transacao) {
+    public ReceitasController(IBancoDeReceitas receitas, ITranscaoService transacao, IEstoque estoque) {
         this.transacao = transacao;
         this.receitas = receitas;
+        this.estoque = estoque;
     }
 
     @FXML
@@ -60,11 +63,33 @@ public class ReceitasController implements Initializable {
     @FXML
     public void criaReceita() {
         try {
+            NovaReceitaController.selectedReceita = null;
             FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("NovaReceita.fxml"));
             fxmlLoader.setControllerFactory(IoC.context::getInstance);
             Parent root1 = (Parent) fxmlLoader.load();
             Stage stage = new Stage();
             stage.setTitle("Criar Receita");
+            stage.setScene(new Scene(root1));
+            stage.show();
+
+            stage.setOnHiding(event -> {
+                reloadList();
+            });
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    @FXML
+    public void editaReceita() {
+        try {
+            NovaReceitaController.selectedReceita = tbData.getSelectionModel().getSelectedItem();
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("NovaReceita.fxml"));
+            fxmlLoader.setControllerFactory(IoC.context::getInstance);
+            Parent root1 = (Parent) fxmlLoader.load();
+            Stage stage = new Stage();
+            stage.setTitle("Editar Receita");
             stage.setScene(new Scene(root1));
             stage.show();
 

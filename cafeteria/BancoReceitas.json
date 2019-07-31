@@ -1,17 +1,10 @@
 [
   {
-    "Id": "d5ca8c0f-9252-4c24-aa26-5d36ad6f7b96",
+    "Id": "67ba1f73-4d69-4876-a289-d6a2959421ab",
     "NomeReceita": "Café com Leite",
     "Ingredientes": {
-      "93c926e8-e7d0-4718-99b2-2dde9a2d4bb0": 1,
-      "d131bf4a-4174-4971-a71b-4b9245e68a9b": 3
-    }
-  },
-  {
-    "Id": "aa07c990-6384-485f-a372-28baaa52f877",
-    "NomeReceita": "Teste",
-    "Ingredientes": {
-      "d131bf4a-4174-4971-a71b-4b9245e68a9b": 5
+      "d131bf4a-4174-4971-a71b-4b9245e68a9b": 6,
+      "66400ee9-ca49-4e02-b505-76e140b99822": 3
     }
   }
 ]

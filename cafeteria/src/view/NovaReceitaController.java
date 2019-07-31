@@ -23,13 +23,16 @@ import service.interfaces.ITranscaoService;
 import javax.inject.Inject;
 import java.io.IOException;
 import java.net.URL;
+import java.util.Map;
 import java.util.ResourceBundle;
+import java.util.UUID;
 
 public class NovaReceitaController implements Initializable {
     private final ITranscaoService transacao;
     private final IEstoque estoque;
     private final IBancoDeReceitas receitas;
-    public static final ObservableList<NovoMP> IngredientesNovaReceita = FXCollections.observableArrayList();
+    public static ObservableList<NovoMP> IngredientesNovaReceita = FXCollections.observableArrayList();
+    public static Receita selectedReceita;
 
     //Injeta o estoque
     @Inject
@@ -55,6 +58,9 @@ public class NovaReceitaController implements Initializable {
     @FXML
     public Button botaoCriarReceita;
 
+    @FXML
+    public Button botaoCancelar;
+
     @Override
     public void initialize(URL location, ResourceBundle resources) {
 
@@ -68,6 +74,8 @@ public class NovaReceitaController implements Initializable {
         tbData.getColumns().clear();
         tbData.getColumns().addAll(produto, qtd);
 
+        if(selectedReceita != null)
+            editaReceita(selectedReceita);
     }
 
     @FXML
@@ -88,6 +96,12 @@ public class NovaReceitaController implements Initializable {
     }
 
     @FXML
+    private void botaoCancelar() {
+        Stage stage = (Stage) botaoCancelar.getScene().getWindow();
+        stage.close();
+    }
+
+    @FXML
     public void adicionarMP() {
         try {
             FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("SelMateriaPrima.fxml"));
@@ -104,7 +118,16 @@ public class NovaReceitaController implements Initializable {
 
     @FXML
     public void removeMP() {
-        IngredientesNovaReceita.removeIf(x -> x.getProduto().equals(tbData.getSelectionModel().getSelectedItem().getProduto()));
+        IngredientesNovaReceita.remove(tbData.getSelectionModel().getSelectedItem());
+    }
+
+    public void editaReceita(Receita receita){
+        nomeReceita.setText(receita.getNomeReceita());
+
+        for(Map.Entry<UUID, Integer> x : receita.getIngredientes().entrySet()){
+            NovoMP mp = new NovaReceitaController.NovoMP(estoque.getMP(x.getKey()).getNome(), Integer.toString(x.getValue()));
+            IngredientesNovaReceita.add(mp);
+        }
     }
 
     public static class NovoMP {

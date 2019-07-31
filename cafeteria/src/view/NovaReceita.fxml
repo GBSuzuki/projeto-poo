@@ -4,7 +4,7 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.Font?>
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="300.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.NovaReceitaController">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="320.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.NovaReceitaController">
    <center>
       <TableView fx:id="tbData" editable="true" BorderPane.alignment="CENTER">
         <columns>
@@ -16,7 +16,7 @@
    <bottom>
       <HBox prefHeight="40.0" prefWidth="200.0" BorderPane.alignment="CENTER">
          <children>
-            <Pane nodeOrientation="RIGHT_TO_LEFT" prefWidth="150.0">
+            <Pane nodeOrientation="RIGHT_TO_LEFT" prefWidth="160.0">
                <children>
                   <Button contentDisplay="CENTER" layoutX="3.0" layoutY="7.0" mnemonicParsing="false" onAction="#adicionarMP" text="Adicionar Produto" textAlignment="CENTER" wrapText="true" />
                </children>
@@ -37,7 +37,7 @@
                   <Label text="Nome da Receita:" />
                </children>
                <HBox.margin>
-                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                  <Insets bottom="10.0" left="5.0" right="3.0" top="10.0" />
                </HBox.margin>
                <opaqueInsets>
                   <Insets />
@@ -57,14 +57,26 @@
             </Pane>
             <Pane>
                <children>
-                  <Button fx:id="botaoCriarReceita" mnemonicParsing="false" onAction="#criarReceita" text="Criar Receita" textAlignment="CENTER">
+                  <Button fx:id="botaoCriarReceita" mnemonicParsing="false" onAction="#criarReceita" text="Salvar" textAlignment="CENTER">
                      <font>
                         <Font name="System Bold" size="12.0" />
                      </font>
                   </Button>
                </children>
                <HBox.margin>
-                  <Insets bottom="7.0" left="6.0" right="5.0" top="7.0" />
+                  <Insets bottom="7.0" left="5.0" right="5.0" top="7.0" />
+               </HBox.margin>
+            </Pane>
+            <Pane layoutX="213.0" layoutY="17.0">
+               <children>
+                  <Button fx:id="botaoCancelar" mnemonicParsing="false" onAction="#botaoCancelar" text="Cancelar" textAlignment="CENTER">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Button>
+               </children>
+               <HBox.margin>
+                  <Insets right="5.0" top="7.0" />
                </HBox.margin>
             </Pane>
          </children>
