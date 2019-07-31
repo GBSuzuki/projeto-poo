@@ -44,7 +44,6 @@ public class ReceitasController implements Initializable {
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        receitas.attDisp();
         nome.setCellValueFactory(c -> new SimpleStringProperty(c.getValue().getNomeReceita()));
         preco.setCellValueFactory(c -> new SimpleStringProperty(Float.toString(receitas.ObterPreco(c.getValue().getNomeReceita())))
         );

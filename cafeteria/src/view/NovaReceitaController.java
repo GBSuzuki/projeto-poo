@@ -37,6 +37,7 @@ public class NovaReceitaController implements Initializable {
         this.transacao = transacao;
         this.estoque = estoque;
         this.receitas = receitas;
+        IngredientesNovaReceita.clear();
     }
 
     @FXML
@@ -63,8 +64,8 @@ public class NovaReceitaController implements Initializable {
         // Coluna 2 - quantidade de produto
         qtd.setCellValueFactory(new PropertyValueFactory<>("qtd"));
 
-
         tbData.setItems(IngredientesNovaReceita);
+        tbData.getColumns().clear();
         tbData.getColumns().addAll(produto, qtd);
 
     }

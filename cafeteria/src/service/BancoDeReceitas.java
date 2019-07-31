@@ -103,6 +103,7 @@ public class BancoDeReceitas implements IBancoDeReceitas {
     }
 
     public int obterDisp(UUID Id) {
+        this.attDisp();
         return produtosFinais.get(Id);
     }
 
