@@ -10,10 +10,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Button;
-import javafx.scene.control.TableColumn;
-import javafx.scene.control.TableView;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
 import service.interfaces.IBancoDeReceitas;
@@ -22,13 +19,13 @@ import service.interfaces.ITranscaoService;
 
 import javax.inject.Inject;
 import java.io.IOException;
+import java.lang.reflect.InvocationTargetException;
 import java.net.URL;
 import java.util.Map;
 import java.util.ResourceBundle;
 import java.util.UUID;
 
 public class NovaReceitaController implements Initializable {
-    private final ITranscaoService transacao;
     private final IEstoque estoque;
     private final IBancoDeReceitas receitas;
     public static ObservableList<NovoMP> IngredientesNovaReceita = FXCollections.observableArrayList();
@@ -36,8 +33,7 @@ public class NovaReceitaController implements Initializable {
 
     //Injeta o estoque
     @Inject
-    public NovaReceitaController(IEstoque estoque, ITranscaoService transacao, IBancoDeReceitas receitas) {
-        this.transacao = transacao;
+    public NovaReceitaController(IEstoque estoque, IBancoDeReceitas receitas) {
         this.estoque = estoque;
         this.receitas = receitas;
         IngredientesNovaReceita.clear();
@@ -86,7 +82,6 @@ public class NovaReceitaController implements Initializable {
             if (!IngredientesNovaReceita.isEmpty()) {
                 for (NovoMP x : IngredientesNovaReceita)
                     nova.addIngrediente(estoque.getMP(x.getProduto()).getId(), Integer.parseInt(x.getQtd()));
-
                 receitas.AdicionaReceita(nova);
 
                 Stage stage = (Stage) botaoCriarReceita.getScene().getWindow();

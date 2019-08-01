@@ -23,7 +23,7 @@ public interface IBancoDeReceitas {
 
     void RemoveReceita(String NomeReceita);
 
-    public void attDisp();
+    public int attDisp(UUID Id);
 
     public int obterDisp(UUID Id);
 

@@ -7,10 +7,7 @@ import service.interfaces.IPersistenceService;
 
 import javax.inject.Inject;
 import javax.inject.Singleton;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Map;
-import java.util.UUID;
+import java.util.*;
 
 @Singleton
 public class BancoDeReceitas implements IBancoDeReceitas {
@@ -74,38 +71,18 @@ public class BancoDeReceitas implements IBancoDeReceitas {
         persistenceService.setBancoReceitas(Receitas);
     }
 
-    public void attDisp() {
-        /* Percorre o banco de receitas */
-        for (Receita receita : this.getReceitas()) {
-            /* Variável que salva a quantidade de materia prima limitante */
-            int menorQuantidade = -1;
-
-            /* Percorre o ingrediente de cada receita */
-            for (UUID idIngrediente : receita.getIngredientes().keySet()) {
-
-                /* Pega a quantidade de materia prima no estoque*/
-                int qtdEstoque = estoque.getMP(idIngrediente).getQuantidade();
-                int qtdProduto = 0;
-
-                /* Verifica quantos * o produto pode ser produzido */
-                while (qtdEstoque > 0) {
-                    qtdEstoque = qtdEstoque - receita.getIngredientes().get(idIngrediente);
-                    if(qtdEstoque > 0)
-                        qtdProduto++;
-                }
-
-                /* Matem sempre o materia prima limitante */
-                menorQuantidade = menorQuantidade == -1 || menorQuantidade > qtdProduto ? qtdProduto : menorQuantidade;
-
-                /* Guarda a quantidade disponível da receita no HashMap atrelado ao UUID da receita */
-                produtosFinais.put(receita.getId(), menorQuantidade);
-            }
-        }
+    public int attDisp(UUID Id) {
+        return getReceita(Id)
+                .getIngredientes()
+                .entrySet()
+                .stream()
+                .map(x -> estoque.getMP(x.getKey()).getQuantidade() / x.getValue())
+                .min(Comparator.comparing(Float::valueOf))
+                .orElse(0);
     }
 
     public int obterDisp(UUID Id) {
-        this.attDisp();
-        return produtosFinais.get(Id);
+        return this.attDisp(Id);
     }
 
     public Map<UUID, Integer> obterDispAll() {

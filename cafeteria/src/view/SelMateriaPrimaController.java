@@ -3,6 +3,7 @@ package view;
 import domain.MateriaPrima;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
@@ -47,11 +48,23 @@ public class SelMateriaPrimaController implements Initializable {
     @FXML
     public void botaoAdicionar() {
         if (!fieldMP.getText().isEmpty() && !fielQtd.getText().isEmpty()) {
-            NovaReceitaController.IngredientesNovaReceita.removeIf(x -> x.getProduto().equals(fieldMP.getText()));
-            NovaReceitaController.IngredientesNovaReceita.add(new NovaReceitaController.NovoMP(fieldMP.getText(), fielQtd.getText()));
+            if(estoque.getMP(fieldMP.getText()) == null)
+            {
+                Alert dialogoInfo = new Alert(Alert.AlertType.INFORMATION);
+                dialogoInfo.setTitle("Matéria prima");
+                dialogoInfo.setHeaderText("Matéria prima não existente");
+                dialogoInfo.setContentText("Favor realizar a compra da matéria prima antes de adicionar a receita");
+                dialogoInfo.showAndWait();
+                fieldMP.setText("");
+                fielQtd.setText("");
+            }
+            else {
+                NovaReceitaController.IngredientesNovaReceita.removeIf(x -> x.getProduto().equals(fieldMP.getText()));
+                NovaReceitaController.IngredientesNovaReceita.add(new NovaReceitaController.NovoMP(fieldMP.getText(), fielQtd.getText()));
 
-            Stage stage = (Stage) botaoAdicionar.getScene().getWindow();
-            stage.close();
+                Stage stage = (Stage) botaoAdicionar.getScene().getWindow();
+                stage.close();
+            }
         }
     }
 
