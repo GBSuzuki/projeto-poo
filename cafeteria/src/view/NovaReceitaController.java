@@ -106,10 +106,11 @@ public class NovaReceitaController implements Initializable {
         try {
             FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("SelMateriaPrima.fxml"));
             fxmlLoader.setControllerFactory(IoC.context::getInstance);
-            Parent root1 = (Parent) fxmlLoader.load();
+            Parent root = (Parent) fxmlLoader.load();
             Stage stage = new Stage();
             stage.setTitle("Selecionar Produto");
-            stage.setScene(new Scene(root1));
+            stage.setScene(new Scene(root));
+            stage.setResizable(false);
             stage.show();
         } catch (IOException e) {
             e.printStackTrace();

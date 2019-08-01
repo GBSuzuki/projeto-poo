@@ -21,6 +21,7 @@ public class Main extends Application {
         this.primaryStage.setTitle("Cafeteria");
 
         initRootLayout();
+        addCaixaTab();
         addEstoqueTab();
         addReceitasTab();
     }
@@ -42,6 +43,7 @@ public class Main extends Application {
             // Mostra a scene (cena) contendo o root layout.
             Scene scene = new Scene(rootLayout);
             primaryStage.setScene(scene);
+            primaryStage.setResizable(false);
             primaryStage.show();
         } catch (IOException e) {
             e.printStackTrace();
@@ -83,6 +85,25 @@ public class Main extends Application {
             tabReceitas.setText("Receitas");
             tabReceitas.setContent(receitasOverview);
             rootTabPane.getTabs().add(tabReceitas);
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void addCaixaTab() {
+        try {
+            // Carrega o FXML do estoque.
+            FXMLLoader loader = new FXMLLoader();
+            loader.setLocation(Main.class.getResource("view/Caixa.fxml"));
+            loader.setControllerFactory(IoC.context::getInstance);
+            BorderPane caixaOverview = (BorderPane) loader.load();
+
+            //Cria a tab 1 e define o conteudo do fxml.
+            Tab tabCaixa = new Tab();
+            tabCaixa.setText("Caixa");
+            tabCaixa.setContent(caixaOverview);
+            rootTabPane.getTabs().add(tabCaixa);
 
         } catch (IOException e) {
             e.printStackTrace();

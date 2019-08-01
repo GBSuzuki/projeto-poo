@@ -2,16 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9318db9a-586e-4cd1-94be-70059495064c" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/view/Caixa.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/view/CaixaController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/BancoReceitas.json" beforeDir="false" afterPath="$PROJECT_DIR$/BancoReceitas.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Estoque.json" beforeDir="false" afterPath="$PROJECT_DIR$/Estoque.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cafeteria.db" beforeDir="false" afterPath="$PROJECT_DIR$/cafeteria.db" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/cafeteria/view/NovaReceita.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/cafeteria/view/NovaReceita.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/cafeteria/view/Receitas.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/cafeteria/view/Receitas.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/service/BancoDeReceitas.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/service/BancoDeReceitas.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/view/NovaReceita.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/NovaReceita.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/cafeteria/view/SelMateriaPrima.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/cafeteria/view/SelMateriaPrima.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/view/EstoqueController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/EstoqueController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/view/NovaReceitaController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/NovaReceitaController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/view/Receitas.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/Receitas.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/view/ReceitasController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/ReceitasController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/view/SelMateriaPrimaController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/SelMateriaPrimaController.java" afterDir="false" />
     </list>
@@ -155,7 +156,7 @@
       <workItem from="1564515273156" duration="4878000" />
       <workItem from="1564521200672" duration="334000" />
       <workItem from="1564521557451" duration="6034000" />
-      <workItem from="1564607777084" duration="6426000" />
+      <workItem from="1564607777084" duration="10536000" />
     </task>
     <task id="LOCAL-00001" summary="Tentativa de implementação da GUI">
       <created>1564318970214</created>
@@ -206,7 +207,14 @@
       <option name="project" value="LOCAL" />
       <updated>1564608630706</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Botão para edição das receitas implementado.">
+      <created>1564616112271</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1564616112271</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -234,7 +242,8 @@
     <MESSAGE value="Tela de Criação de receitas implementada juntamente com funções dos &#10;botões. (Existem problemas a serem resolvidos)" />
     <MESSAGE value="Tela de receitas e subfunções 100% funcionais." />
     <MESSAGE value="Correção de warning ao carregar o FXML da tela Receitas." />
-    <option name="LAST_COMMIT_MESSAGE" value="Correção de warning ao carregar o FXML da tela Receitas." />
+    <MESSAGE value="Botão para edição das receitas implementado." />
+    <option name="LAST_COMMIT_MESSAGE" value="Botão para edição das receitas implementado." />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">

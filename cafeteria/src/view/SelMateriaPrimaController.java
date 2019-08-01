@@ -41,7 +41,7 @@ public class SelMateriaPrimaController implements Initializable {
             mps.add(x.getNome());
         }
 
-        TextFields.bindAutoCompletion(fieldMP, mps);
+        TextFields.bindAutoCompletion(fieldMP, mps).setMaxWidth(90);
     }
 
     @FXML

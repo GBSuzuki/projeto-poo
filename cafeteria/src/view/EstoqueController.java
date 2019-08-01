@@ -72,6 +72,7 @@ public class EstoqueController implements Initializable {
             Stage stage = new Stage();
             stage.setTitle("Comprar Produto");
             stage.setScene(new Scene(root1));
+            stage.setResizable(false);
             stage.show();
 
             stage.setOnHiding(event -> {
