@@ -9,25 +9,32 @@
       <TableView fx:id="tbData" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
         <columns>
           <TableColumn fx:id="nome" prefWidth="110.0" text="Nome" />
-            <TableColumn fx:id="preco" prefWidth="53.0" text="Preço" />
-            <TableColumn fx:id="qtd" prefWidth="75.0" text="Disponível" />
+            <TableColumn fx:id="preco" prefWidth="75.0" text="Preço" />
         </columns>
       </TableView>
    </center>
    <left>
-      <VBox prefHeight="400.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+      <VBox prefHeight="400.0" prefWidth="105.0" BorderPane.alignment="CENTER">
          <children>
-            <Button mnemonicParsing="false" text="Adicionar Item" textAlignment="CENTER" wrapText="true">
+            <Button mnemonicParsing="false" onAction="#adicionarReceita" textAlignment="CENTER" wrapText="true">
                <padding>
                   <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
                </padding>
                <VBox.margin>
-                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                  <Insets bottom="5.0" left="10.0" right="10.0" top="10.0" />
                </VBox.margin>
+               <graphic>
+                  <VBox alignment="CENTER" prefWidth="100.0">
+                     <children>
+                        <Label alignment="CENTER" text="Adicionar" />
+                        <Label contentDisplay="CENTER" layoutX="10.0" layoutY="102.0" text="Item" />
+                     </children>
+                  </VBox>
+               </graphic>
             </Button>
             <Button mnemonicParsing="false" onAction="#removeReceita" text="Remover Item" textAlignment="CENTER" wrapText="true">
                <VBox.margin>
-                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="5.0" />
                </VBox.margin>
                <padding>
                   <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
@@ -39,37 +46,28 @@
    <bottom>
       <ToolBar BorderPane.alignment="CENTER">
         <items>
-            <SplitPane dividerPositions="0.29797979797979796">
-              <items>
-                <AnchorPane minHeight="0.0" minWidth="150.0" prefHeight="45.0" prefWidth="150.0">
-                     <children>
-                        <Pane nodeOrientation="LEFT_TO_RIGHT" prefHeight="45.0" prefWidth="150.0">
-                           <children>
-                              <Label text="Total:">
-                                 <padding>
-                                    <Insets left="10.0" />
-                                 </padding>
-                              </Label>
-                              <Label text="R$ 0,00">
-                                 <padding>
-                                    <Insets left="10.0" top="17.0" />
-                                 </padding>
-                                 <font>
-                                    <Font name="System Bold" size="19.0" />
-                                 </font>
-                              </Label>
-                           </children>
-                        </Pane>
-                     </children>
-                  </AnchorPane>
-                <AnchorPane minHeight="0.0" minWidth="0.0" nodeOrientation="RIGHT_TO_LEFT" prefHeight="45.0" prefWidth="430.0">
-                     <children>
-                      <Button alignment="CENTER" layoutX="5.0" layoutY="10.0" mnemonicParsing="false" text="Pagar" />
-                        <Button alignment="CENTER" layoutX="58.0" layoutY="10.0" mnemonicParsing="false" text="Cancelar" />
-                     </children>
-                  </AnchorPane>
-              </items>
-            </SplitPane>
+            <Pane nodeOrientation="LEFT_TO_RIGHT">
+               <children>
+                  <Label text="Total:">
+                     <padding>
+                        <Insets left="10.0" />
+                     </padding>
+                  </Label>
+                  <Label fx:id="precoFinal" text="R$ 0.00">
+                     <padding>
+                        <Insets bottom="5.0" left="10.0" top="17.0" />
+                     </padding>
+                     <font>
+                        <Font name="System Bold" size="19.0" />
+                     </font>
+                  </Label>
+               </children>
+               <padding>
+                  <Insets right="350.0" />
+               </padding>
+            </Pane>
+            <Button alignment="CENTER" ellipsisString="Cancelar" mnemonicParsing="false" onAction="#Cancelar" text="Cancelar" />
+          <Button alignment="CENTER" ellipsisString="Pagar" mnemonicParsing="false" onAction="#Pagar" text="Pagar" />
         </items>
       </ToolBar>
    </bottom>

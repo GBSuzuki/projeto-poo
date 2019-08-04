@@ -1,17 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.Insets?>
-<?import javafx.scene.control.Button?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.control.TextField?>
-<?import javafx.scene.control.ToolBar?>
-<?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.BorderPane?>
-<?import javafx.scene.layout.ColumnConstraints?>
-<?import javafx.scene.layout.GridPane?>
-<?import javafx.scene.layout.HBox?>
-<?import javafx.scene.layout.RowConstraints?>
-
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
 <AnchorPane prefHeight="180.0" prefWidth="200.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.CompraProdutoController">
    <children>
       <BorderPane layoutX="189.0" layoutY="100.0" prefHeight="300.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
@@ -19,7 +10,7 @@
             <ToolBar nodeOrientation="RIGHT_TO_LEFT" prefHeight="40.0" prefWidth="200.0" BorderPane.alignment="CENTER">
               <items>
                 <Button fx:id="botaoAdicionar" alignment="CENTER" mnemonicParsing="false" onAction="#botaoAdicionar" text="Adicionar" textAlignment="CENTER" />
-                  <Button fx:id="botaoCancelar" mnemonicParsing="false" onAction="#botaoCancelar" text="Cancelar" />
+                  <Button fx:id="botaoCancelar" alignment="CENTER" mnemonicParsing="false" onAction="#botaoCancelar" text="Cancelar" />
               </items>
             </ToolBar>
          </bottom>
@@ -41,12 +32,11 @@
                      </GridPane.margin></TextField>
                   <HBox alignment="CENTER_LEFT" prefHeight="40.0" prefWidth="73.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
                      <children>
-                        <Label prefWidth="76.0" text="R$" textOverrun="CENTER_WORD_ELLIPSIS">
-                           <padding>
-                              <Insets right="3.0" />
-                           </padding>
-                        </Label>
-                        <TextField fx:id="fieldPreco" prefWidth="128.0" promptText="4.50" />
+                        <Label ellipsisString="R$" text="R$" textAlignment="CENTER" textOverrun="CENTER_WORD_ELLIPSIS" />
+                        <TextField fx:id="fieldPreco" promptText="4.50">
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin></TextField>
                      </children>
                   </HBox>
                   <TextField fx:id="fieldQuantidade" minHeight="0.0" minWidth="0.0" promptText="5" GridPane.columnIndex="1" GridPane.rowIndex="2">

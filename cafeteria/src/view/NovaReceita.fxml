@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.*?>
+<?import javafx.geometry.Insets?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.Font?>
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="320.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.NovaReceitaController">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.NovaReceitaController">
    <center>
       <TableView fx:id="tbData" editable="true" BorderPane.alignment="CENTER">
         <columns>
@@ -13,73 +13,40 @@
         </columns>
       </TableView>
    </center>
-   <bottom>
-      <HBox prefHeight="40.0" prefWidth="200.0" BorderPane.alignment="CENTER">
-         <children>
-            <Pane nodeOrientation="RIGHT_TO_LEFT" prefWidth="160.0">
-               <children>
-                  <Button contentDisplay="CENTER" layoutX="3.0" layoutY="7.0" mnemonicParsing="false" onAction="#adicionarMP" text="Adicionar Produto" textAlignment="CENTER" wrapText="true" />
-               </children>
-            </Pane>
-            <Pane>
-               <children>
-                  <Button layoutX="3.0" layoutY="7.0" mnemonicParsing="false" onAction="#removeMP" text=" Remover Produto" textAlignment="CENTER" wrapText="true" />
-               </children>
-            </Pane>
-         </children>
-      </HBox>
-   </bottom>
    <top>
-      <HBox BorderPane.alignment="CENTER">
-         <children>
-            <Pane>
-               <children>
-                  <Label text="Nome da Receita:" />
-               </children>
-               <HBox.margin>
-                  <Insets bottom="10.0" left="5.0" right="3.0" top="10.0" />
-               </HBox.margin>
+      <ToolBar BorderPane.alignment="CENTER">
+        <items>
+            <Label text="Nome da Receita:" />
+            <TextField fx:id="nomeReceita" prefWidth="105.0" promptText="Nova Receita">
                <opaqueInsets>
                   <Insets />
                </opaqueInsets>
-            </Pane>
-            <Pane>
-               <children>
-                  <TextField fx:id="nomeReceita" prefWidth="90.0" promptText="Nova Receita">
-                     <opaqueInsets>
-                        <Insets />
-                     </opaqueInsets>
-                  </TextField>
-               </children>
+            </TextField>
+            <Button fx:id="botaoCriarReceita" mnemonicParsing="false" onAction="#criarReceita" text="Salvar" textAlignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+            <Button fx:id="botaoCancelar" mnemonicParsing="false" onAction="#botaoCancelar" text="Cancelar" textAlignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+        </items>
+      </ToolBar>
+   </top>
+   <bottom>
+      <HBox alignment="CENTER" BorderPane.alignment="CENTER">
+         <children>
+            <Button contentDisplay="CENTER" mnemonicParsing="false" onAction="#adicionarMP" text="Adicionar Produto" textAlignment="CENTER" wrapText="true">
                <HBox.margin>
-                  <Insets bottom="7.0" top="7.0" />
-               </HBox.margin>
-            </Pane>
-            <Pane>
-               <children>
-                  <Button fx:id="botaoCriarReceita" mnemonicParsing="false" onAction="#criarReceita" text="Salvar" textAlignment="CENTER">
-                     <font>
-                        <Font name="System Bold" size="12.0" />
-                     </font>
-                  </Button>
-               </children>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </HBox.margin></Button>
+            <Button contentDisplay="CENTER" mnemonicParsing="false" onAction="#removeMP" text=" Remover Produto" textAlignment="CENTER" wrapText="true">
                <HBox.margin>
-                  <Insets bottom="7.0" left="5.0" right="5.0" top="7.0" />
-               </HBox.margin>
-            </Pane>
-            <Pane layoutX="213.0" layoutY="17.0">
-               <children>
-                  <Button fx:id="botaoCancelar" mnemonicParsing="false" onAction="#botaoCancelar" text="Cancelar" textAlignment="CENTER">
-                     <font>
-                        <Font name="System Bold" size="12.0" />
-                     </font>
-                  </Button>
-               </children>
-               <HBox.margin>
-                  <Insets right="5.0" top="7.0" />
-               </HBox.margin>
-            </Pane>
+                  <Insets left="5.0" />
+               </HBox.margin></Button>
          </children>
       </HBox>
-   </top>
+   </bottom>
 </BorderPane>

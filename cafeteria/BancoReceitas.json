@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "8245c08e-436d-440b-9251-f06808688526",
+    "NomeReceita": "Leite com Café",
+    "Ingredientes": {
+      "9b48e440-c44a-44cc-a692-c5b87c95f7c2": 1,
+      "f1be5303-7eee-44b5-8366-524408ca2bba": 3
+    }
+  },
+  {
+    "Id": "23a0d3e1-d7ce-4701-8305-e5e8b33bcc2e",
+    "NomeReceita": "Pão com Manteiga",
+    "Ingredientes": {
+      "91e40d1d-c0e3-433c-87b5-825b1c663604": 2,
+      "37c72b5d-79f3-4585-b664-f20ffc98b224": 4
+    }
+  }
+]

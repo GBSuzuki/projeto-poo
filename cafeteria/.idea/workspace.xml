@@ -1,16 +1,40 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="cafeteria" />
+    </artifacts-to-build>
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="9318db9a-586e-4cd1-94be-70059495064c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dbnavigator.xml" afterDir="false" />
+    <list default="true" id="9318db9a-586e-4cd1-94be-70059495064c" name="Default Changelist" comment="Projeto alterado para oo JDK 8 (Oracle) com o intuito de criar um executável para ubuntu sem dependências externas.">
+      <change afterPath="$PROJECT_DIR$/.idea/artifacts/cafeteria.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/controlsfx_8_40_15.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BancoReceitas.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Estoque.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/libs/controlsfx-8.40.15.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/view/SelReceita.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/view/SelReceitaController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/controlsfx_11_0_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/javafx.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BancoReceitas.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Estoque.json" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/cafeteria.db" beforeDir="false" afterPath="$PROJECT_DIR$/cafeteria.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/service/BancoDeReceitas.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/service/BancoDeReceitas.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/service/interfaces/IBancoDeReceitas.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/service/interfaces/IBancoDeReceitas.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/view/NovaReceitaController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/NovaReceitaController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cafeteria.iml" beforeDir="false" afterPath="$PROJECT_DIR$/cafeteria.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/cafeteria/view/CompraProduto.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/cafeteria/view/CompraProduto.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/cafeteria/view/Estoque.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/cafeteria/view/Estoque.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/cafeteria/view/NovaReceita.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/cafeteria/view/NovaReceita.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/cafeteria/view/Receitas.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/cafeteria/view/Receitas.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/cafeteria/view/SelMateriaPrima.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/cafeteria/view/SelMateriaPrima.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/service/PersistenceService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/service/PersistenceService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/view/Caixa.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/Caixa.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/view/CaixaController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/CaixaController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/view/CompraProduto.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/CompraProduto.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/view/Estoque.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/Estoque.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/view/EstoqueController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/EstoqueController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/view/NovaReceita.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/NovaReceita.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/view/Receitas.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/Receitas.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/view/ReceitasController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/ReceitasController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/view/SelMateriaPrima.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/SelMateriaPrima.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/view/SelMateriaPrimaController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/SelMateriaPrimaController.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -62,23 +86,26 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/src/view" />
-    <property name="project.structure.last.edited" value="Libraries" />
+    <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="sample" />
+    </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="view" />
       <recent name="domain" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/view" />
       <recent name="C:\Users\rapha\Documents\POO\projeto-poo\cafeteria\src\view" />
       <recent name="C:\Users\rapha\Documents\POO\projeto-poo\cafeteria\src" />
       <recent name="$PROJECT_DIR$/libs" />
       <recent name="$PROJECT_DIR$/out" />
-      <recent name="$PROJECT_DIR$/src" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -154,6 +181,14 @@
       <workItem from="1564521200672" duration="334000" />
       <workItem from="1564521557451" duration="6034000" />
       <workItem from="1564607777084" duration="10536000" />
+      <workItem from="1564792244438" duration="1344000" />
+      <workItem from="1564795841952" duration="259000" />
+      <workItem from="1564796118911" duration="145000" />
+      <workItem from="1564796565081" duration="121000" />
+      <workItem from="1564796706616" duration="1204000" />
+      <workItem from="1564798773131" duration="14000" />
+      <workItem from="1564798810881" duration="6772000" />
+      <workItem from="1564831996842" duration="9454000" />
     </task>
     <task id="LOCAL-00001" summary="Tentativa de implementação da GUI">
       <created>1564318970214</created>
@@ -240,7 +275,8 @@
     <MESSAGE value="Tela de receitas e subfunções 100% funcionais." />
     <MESSAGE value="Correção de warning ao carregar o FXML da tela Receitas." />
     <MESSAGE value="Botão para edição das receitas implementado." />
-    <option name="LAST_COMMIT_MESSAGE" value="Botão para edição das receitas implementado." />
+    <MESSAGE value="Projeto alterado para oo JDK 8 (Oracle) com o intuito de criar um executável para ubuntu sem dependências externas." />
+    <option name="LAST_COMMIT_MESSAGE" value="Projeto alterado para oo JDK 8 (Oracle) com o intuito de criar um executável para ubuntu sem dependências externas." />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">

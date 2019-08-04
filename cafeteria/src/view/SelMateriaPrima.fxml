@@ -28,7 +28,7 @@
          <children>
             <TextField fx:id="fieldMP" GridPane.columnIndex="1" />
             <TextField fx:id="fielQtd" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-            <Label text="Matéria Prima:" />
+            <Label text="Produto:" />
             <Label text="Quantidade:" GridPane.rowIndex="1" />
          </children>
       </GridPane>

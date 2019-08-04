@@ -8,37 +8,61 @@
       <TableView fx:id="tbData" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
         <columns>
           <TableColumn fx:id="nome" prefWidth="110.0" text="Nome" />
-            <TableColumn fx:id="preco" prefWidth="53.0" text="Preço" />
-            <TableColumn fx:id="qtd" prefWidth="75.0" text="Disponível" />
+            <TableColumn fx:id="preco" prefWidth="75.0" text="Preço" />
+            <TableColumn fx:id="qtd" prefWidth="100.0" text="Disponível" />
         </columns>
       </TableView>
    </center>
    <left>
-      <VBox prefHeight="400.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+      <VBox prefHeight="400.0" prefWidth="105.0" BorderPane.alignment="CENTER">
          <children>
-            <Button mnemonicParsing="false" onAction="#criaReceita" text=" Criar Receita" textAlignment="CENTER" wrapText="true">
+            <Button mnemonicParsing="false" onAction="#criaReceita" prefWidth="100.0" textAlignment="CENTER" wrapText="true">
                <padding>
                   <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
                </padding>
                <VBox.margin>
-                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                  <Insets bottom="5.0" left="10.0" right="10.0" top="10.0" />
                </VBox.margin>
+               <graphic>
+                  <VBox alignment="CENTER">
+                     <children>
+                        <Label text="Criar" />
+                        <Label layoutX="10.0" layoutY="10.0" text="Receita" />
+                     </children>
+                  </VBox>
+               </graphic>
             </Button>
-            <Button layoutX="20.0" layoutY="94.0" mnemonicParsing="false" onAction="#editaReceita" text=" Editar Receita" textAlignment="CENTER" wrapText="true">
+            <Button layoutX="20.0" layoutY="94.0" mnemonicParsing="false" onAction="#editaReceita" prefWidth="100.0" textAlignment="CENTER" wrapText="true">
                <padding>
                   <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
                </padding>
                <VBox.margin>
-                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                  <Insets bottom="5.0" left="10.0" right="10.0" top="5.0" />
                </VBox.margin>
+               <graphic>
+                  <VBox alignment="CENTER">
+                     <children>
+                        <Label text="Editar" />
+                        <Label layoutX="10.0" layoutY="10.0" text="Receita" />
+                     </children>
+                  </VBox>
+               </graphic>
             </Button>
-            <Button mnemonicParsing="false" onAction="#removeReceita" text=" Remover Receita" textAlignment="CENTER" wrapText="true">
+            <Button mnemonicParsing="false" onAction="#removeReceita" prefWidth="100.0" textAlignment="CENTER" wrapText="true">
                <VBox.margin>
-                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="5.0" />
                </VBox.margin>
                <padding>
                   <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
                </padding>
+               <graphic>
+                  <VBox alignment="CENTER">
+                     <children>
+                        <Label text="Remover" />
+                        <Label layoutX="10.0" layoutY="10.0" text="Receita" />
+                     </children>
+                  </VBox>
+               </graphic>
             </Button>
          </children>
       </VBox>

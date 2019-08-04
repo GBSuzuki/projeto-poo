@@ -11,10 +11,7 @@ import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
-import java.lang.reflect.Array;
 import java.util.ArrayList;
-import java.util.List;
-import java.util.concurrent.atomic.AtomicReferenceArray;
 
 public class PersistenceService implements IPersistenceService {
     @Override
@@ -57,9 +54,7 @@ public class PersistenceService implements IPersistenceService {
         Gson gson = new Gson();
         ArrayList<Receita> obj = null;
         try {
-            var fooType = new TypeToken<ArrayList<Receita>>() {}.getType();
-            BufferedReader br = new BufferedReader(new FileReader(arquivo));
-            obj = gson.fromJson(br, fooType);
+            obj = gson.fromJson(new BufferedReader(new FileReader(arquivo)), new TypeToken<ArrayList<Receita>>() {}.getType());
         }
         finally {
             if(obj == null)
@@ -73,9 +68,7 @@ public class PersistenceService implements IPersistenceService {
         Gson gson = new Gson();
         ArrayList<MateriaPrima> obj = null;
         try {
-            var fooType = new TypeToken<ArrayList<MateriaPrima>>() {}.getType();
-            BufferedReader br = new BufferedReader(new FileReader(arquivo));
-            obj = gson.fromJson(br, fooType);
+            obj = gson.fromJson(new BufferedReader(new FileReader(arquivo)), new TypeToken<ArrayList<MateriaPrima>>() {}.getType());
         }
         finally {
             if(obj == null)

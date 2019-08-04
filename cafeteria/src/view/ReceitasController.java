@@ -8,6 +8,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.stage.Stage;
@@ -80,18 +81,26 @@ public class ReceitasController implements Initializable {
     public void editaReceita() {
         try {
             NovaReceitaController.selectedReceita = tbData.getSelectionModel().getSelectedItem();
-            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("NovaReceita.fxml"));
-            fxmlLoader.setControllerFactory(IoC.context::getInstance);
-            Parent root = (Parent) fxmlLoader.load();
-            Stage stage = new Stage();
-            stage.setTitle("Editar Receita");
-            stage.setScene(new Scene(root));
-            stage.setResizable(false);
-            stage.show();
+            if (NovaReceitaController.selectedReceita != null) {
+                FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("NovaReceita.fxml"));
+                fxmlLoader.setControllerFactory(IoC.context::getInstance);
+                Parent root = (Parent) fxmlLoader.load();
+                Stage stage = new Stage();
+                stage.setTitle("Editar Receita");
+                stage.setScene(new Scene(root));
+                stage.setResizable(false);
+                stage.show();
 
-            stage.setOnHiding(event -> {
-                reloadList();
-            });
+                stage.setOnHiding(event -> {
+                    reloadList();
+                });
+            } else {
+                Alert dialogoInfo = new Alert(Alert.AlertType.INFORMATION);
+                dialogoInfo.setTitle("Editar Receita");
+                dialogoInfo.setHeaderText("Nenhuma receita selecionada");
+                dialogoInfo.setContentText("Você deve selecionar uma receita para poder\neditar.");
+                dialogoInfo.showAndWait();
+            }
 
         } catch (IOException e) {
             e.printStackTrace();
@@ -100,7 +109,15 @@ public class ReceitasController implements Initializable {
 
     @FXML
     public void removeReceita() {
-        receitas.RemoveReceita(tbData.getSelectionModel().getSelectedItem().getId());
-        reloadList();
+        if(tbData.getSelectionModel().getSelectedItem() != null) {
+            receitas.RemoveReceita(tbData.getSelectionModel().getSelectedItem().getId());
+            reloadList();
+        } else {
+            Alert dialogoInfo = new Alert(Alert.AlertType.INFORMATION);
+            dialogoInfo.setTitle("Editar Receita");
+            dialogoInfo.setHeaderText("Nenhuma receita selecionada");
+            dialogoInfo.setContentText("Você deve selecionar uma receita para poder\nremover.");
+            dialogoInfo.showAndWait();
+        }
     }
 }

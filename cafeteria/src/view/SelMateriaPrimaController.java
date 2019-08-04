@@ -53,7 +53,7 @@ public class SelMateriaPrimaController implements Initializable {
                 Alert dialogoInfo = new Alert(Alert.AlertType.INFORMATION);
                 dialogoInfo.setTitle("Matéria prima");
                 dialogoInfo.setHeaderText("Matéria prima não existente");
-                dialogoInfo.setContentText("Favor realizar a compra da matéria prima antes de adicionar a receita");
+                dialogoInfo.setContentText("Favor realizar a compra da matéria prima antes\nde adicionar a receita.");
                 dialogoInfo.showAndWait();
                 fieldMP.setText("");
                 fielQtd.setText("");
