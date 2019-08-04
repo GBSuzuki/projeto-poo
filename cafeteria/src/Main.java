@@ -80,6 +80,12 @@ public class Main extends Application {
             EstoqueTabLoader.setLocation(Main.class.getResource("view/Estoque.fxml"));
             EstoqueTabLoader.setControllerFactory(IoC.context::getInstance);
             BorderPane estoqueOverview = (BorderPane) EstoqueTabLoader.load();
+            estoqueOverview.setMaxWidth(rootTabPane.getMaxWidth());
+            estoqueOverview.setMinWidth(rootTabPane.getMinWidth());
+            estoqueOverview.setPrefWidth(rootTabPane.getPrefWidth());
+            estoqueOverview.setMaxHeight(rootTabPane.getMaxHeight());
+            estoqueOverview.setMinHeight(rootTabPane.getMinHeight());
+            estoqueOverview.setPrefWidth(rootTabPane.getPrefHeight());
 
             //Cria a tab 1 e define o conteudo do fxml.
             Tab tabEstoque = new Tab();
@@ -99,6 +105,12 @@ public class Main extends Application {
             ReceitasTabLoader.setLocation(Main.class.getResource("view/Receitas.fxml"));
             ReceitasTabLoader.setControllerFactory(IoC.context::getInstance);
             BorderPane receitasOverview = (BorderPane) ReceitasTabLoader.load();
+            receitasOverview.setMaxWidth(rootTabPane.getMaxWidth());
+            receitasOverview.setMinWidth(rootTabPane.getMinWidth());
+            receitasOverview.setPrefWidth(rootTabPane.getPrefWidth());
+            receitasOverview.setMaxHeight(rootTabPane.getMaxHeight());
+            receitasOverview.setMinHeight(rootTabPane.getMinHeight());
+            receitasOverview.setPrefWidth(rootTabPane.getPrefHeight());
 
             //Cria a tab 1 e define o conteudo do fxml.
             Tab tabReceitas = new Tab();
@@ -118,6 +130,12 @@ public class Main extends Application {
             CaixaTabLoader.setLocation(Main.class.getResource("view/Caixa.fxml"));
             CaixaTabLoader.setControllerFactory(IoC.context::getInstance);
             BorderPane caixaOverview = (BorderPane) CaixaTabLoader.load();
+            caixaOverview.setMaxWidth(rootTabPane.getMaxWidth());
+            caixaOverview.setMinWidth(rootTabPane.getMinWidth());
+            caixaOverview.setPrefWidth(rootTabPane.getPrefWidth());
+            caixaOverview.setMaxHeight(rootTabPane.getMaxHeight());
+            caixaOverview.setMinHeight(rootTabPane.getMinHeight());
+            caixaOverview.setPrefWidth(rootTabPane.getPrefHeight());
 
             //Cria a tab 1 e define o conteudo do fxml.
             Tab tabCaixa = new Tab();

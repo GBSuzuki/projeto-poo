@@ -62,10 +62,8 @@
                      </font>
                   </Label>
                </children>
-               <padding>
-                  <Insets right="350.0" />
-               </padding>
             </Pane>
+           <Pane HBox.hgrow="ALWAYS" />
             <Button alignment="CENTER" ellipsisString="Cancelar" mnemonicParsing="false" onAction="#Cancelar" text="Cancelar" />
           <Button alignment="CENTER" ellipsisString="Pagar" mnemonicParsing="false" onAction="#Pagar" text="Pagar" />
         </items>
