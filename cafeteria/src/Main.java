@@ -4,14 +4,13 @@ import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Tab;
 import javafx.scene.control.TabPane;
 import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
 import view.EstoqueController;
 import view.ReceitasController;
-
-import java.io.IOException;
 
 public class Main extends Application {
 
@@ -36,10 +35,10 @@ public class Main extends Application {
                 new ChangeListener<Tab>() {
                     @Override
                     public void changed(ObservableValue<? extends Tab> observable, Tab oldValue, Tab newValue) {
-                        EstoqueController estoque = (EstoqueController)(EstoqueTabLoader.getController());
+                        EstoqueController estoque = EstoqueTabLoader.getController();
                         estoque.reloadList();
 
-                        ReceitasController receitas = (ReceitasController)(ReceitasTabLoader.getController());
+                        ReceitasController receitas = ReceitasTabLoader.getController();
                         receitas.reloadList();
                     }
                 }
@@ -57,7 +56,7 @@ public class Main extends Application {
 
             //fala para o loader utilizar o easydi para instanciar a classe
             loader.setControllerFactory(IoC.context::getInstance);
-            rootLayout = (BorderPane) loader.load();
+            rootLayout = loader.load();
             rootTabPane = (TabPane) rootLayout.getCenter();
 
             // Mostra a scene (cena) contendo o root layout.
@@ -65,7 +64,12 @@ public class Main extends Application {
             primaryStage.setScene(scene);
             primaryStage.setResizable(false);
             primaryStage.show();
-        } catch (IOException e) {
+        } catch (Exception e) {
+            Alert dialogoInfo = new Alert(Alert.AlertType.ERROR);
+            dialogoInfo.setTitle("Erro Inesperado");
+            dialogoInfo.setHeaderText(null);
+            dialogoInfo.setContentText(e.getMessage());
+            dialogoInfo.showAndWait();
             e.printStackTrace();
         }
     }
@@ -79,7 +83,7 @@ public class Main extends Application {
             EstoqueTabLoader = new FXMLLoader();
             EstoqueTabLoader.setLocation(Main.class.getResource("view/Estoque.fxml"));
             EstoqueTabLoader.setControllerFactory(IoC.context::getInstance);
-            BorderPane estoqueOverview = (BorderPane) EstoqueTabLoader.load();
+            BorderPane estoqueOverview = EstoqueTabLoader.load();
             estoqueOverview.setMaxWidth(rootTabPane.getMaxWidth());
             estoqueOverview.setMinWidth(rootTabPane.getMinWidth());
             estoqueOverview.setPrefWidth(rootTabPane.getPrefWidth());
@@ -93,7 +97,12 @@ public class Main extends Application {
             tabEstoque.setContent(estoqueOverview);
             rootTabPane.getTabs().add(tabEstoque);
 
-        } catch (IOException e) {
+        } catch (Exception e) {
+            Alert dialogoInfo = new Alert(Alert.AlertType.ERROR);
+            dialogoInfo.setTitle("Erro Inesperado");
+            dialogoInfo.setHeaderText(null);
+            dialogoInfo.setContentText(e.getMessage());
+            dialogoInfo.showAndWait();
             e.printStackTrace();
         }
     }
@@ -104,7 +113,7 @@ public class Main extends Application {
             ReceitasTabLoader = new FXMLLoader();
             ReceitasTabLoader.setLocation(Main.class.getResource("view/Receitas.fxml"));
             ReceitasTabLoader.setControllerFactory(IoC.context::getInstance);
-            BorderPane receitasOverview = (BorderPane) ReceitasTabLoader.load();
+            BorderPane receitasOverview = ReceitasTabLoader.load();
             receitasOverview.setMaxWidth(rootTabPane.getMaxWidth());
             receitasOverview.setMinWidth(rootTabPane.getMinWidth());
             receitasOverview.setPrefWidth(rootTabPane.getPrefWidth());
@@ -118,7 +127,12 @@ public class Main extends Application {
             tabReceitas.setContent(receitasOverview);
             rootTabPane.getTabs().add(tabReceitas);
 
-        } catch (IOException e) {
+        } catch (Exception e) {
+            Alert dialogoInfo = new Alert(Alert.AlertType.ERROR);
+            dialogoInfo.setTitle("Erro Inesperado");
+            dialogoInfo.setHeaderText(null);
+            dialogoInfo.setContentText(e.getMessage());
+            dialogoInfo.showAndWait();
             e.printStackTrace();
         }
     }
@@ -129,7 +143,7 @@ public class Main extends Application {
             CaixaTabLoader = new FXMLLoader();
             CaixaTabLoader.setLocation(Main.class.getResource("view/Caixa.fxml"));
             CaixaTabLoader.setControllerFactory(IoC.context::getInstance);
-            BorderPane caixaOverview = (BorderPane) CaixaTabLoader.load();
+            BorderPane caixaOverview = CaixaTabLoader.load();
             caixaOverview.setMaxWidth(rootTabPane.getMaxWidth());
             caixaOverview.setMinWidth(rootTabPane.getMinWidth());
             caixaOverview.setPrefWidth(rootTabPane.getPrefWidth());
@@ -143,7 +157,12 @@ public class Main extends Application {
             tabCaixa.setContent(caixaOverview);
             rootTabPane.getTabs().add(tabCaixa);
 
-        } catch (IOException e) {
+        } catch (Exception e) {
+            Alert dialogoInfo = new Alert(Alert.AlertType.ERROR);
+            dialogoInfo.setTitle("Erro Inesperado");
+            dialogoInfo.setHeaderText(null);
+            dialogoInfo.setContentText(e.getMessage());
+            dialogoInfo.showAndWait();
             e.printStackTrace();
         }
     }

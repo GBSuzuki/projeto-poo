@@ -23,9 +23,9 @@ public interface IBancoDeReceitas {
 
     void RemoveReceita(String NomeReceita);
 
-    public int attDisp(UUID Id);
+    int attDisp(UUID Id);
 
-    public int obterDisp(UUID Id);
+    int obterDisp(UUID Id);
 
-    public Map<UUID, Integer> obterDispAll();
+    Map<UUID, Integer> obterDispAll();
 }

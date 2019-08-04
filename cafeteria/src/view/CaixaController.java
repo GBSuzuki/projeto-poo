@@ -21,7 +21,6 @@ import service.interfaces.IEstoque;
 import service.interfaces.ITranscaoService;
 
 import javax.inject.Inject;
-import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
@@ -90,7 +89,12 @@ public class CaixaController implements Initializable {
             stage.setOnHiding(event -> {
                 atualizaPreco();
             });
-        } catch (IOException e) {
+        } catch (Exception e) {
+            Alert dialogoInfo = new Alert(Alert.AlertType.ERROR);
+            dialogoInfo.setTitle("Erro Inesperado");
+            dialogoInfo.setHeaderText(null);
+            dialogoInfo.setContentText(e.getMessage());
+            dialogoInfo.showAndWait();
             e.printStackTrace();
         }
     }

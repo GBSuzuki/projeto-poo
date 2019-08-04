@@ -2,8 +2,6 @@ package domain;
 
 import domain.interfaces.ATransacao;
 
-import java.util.UUID;
-
 public class Compra extends ATransacao {
 
     public Compra(String nome, int quantidade, float valor) {

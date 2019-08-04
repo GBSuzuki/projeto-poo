@@ -15,7 +15,6 @@ import javafx.stage.Stage;
 import service.interfaces.IBancoDeReceitas;
 
 import javax.inject.Inject;
-import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
@@ -62,7 +61,7 @@ public class ReceitasController implements Initializable {
             NovaReceitaController.selectedReceita = null;
             FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("NovaReceita.fxml"));
             fxmlLoader.setControllerFactory(IoC.context::getInstance);
-            Parent root = (Parent) fxmlLoader.load();
+            Parent root = fxmlLoader.load();
             Stage stage = new Stage();
             stage.setTitle("Criar Receita");
             stage.setScene(new Scene(root));
@@ -73,7 +72,12 @@ public class ReceitasController implements Initializable {
                 reloadList();
             });
 
-        } catch (IOException e) {
+        } catch (Exception e) {
+            Alert dialogoInfo = new Alert(Alert.AlertType.ERROR);
+            dialogoInfo.setTitle("Erro Inesperado");
+            dialogoInfo.setHeaderText(null);
+            dialogoInfo.setContentText(e.getMessage());
+            dialogoInfo.showAndWait();
             e.printStackTrace();
         }
     }
@@ -85,7 +89,7 @@ public class ReceitasController implements Initializable {
             if (NovaReceitaController.selectedReceita != null) {
                 FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("NovaReceita.fxml"));
                 fxmlLoader.setControllerFactory(IoC.context::getInstance);
-                Parent root = (Parent) fxmlLoader.load();
+                Parent root = fxmlLoader.load();
                 Stage stage = new Stage();
                 stage.setTitle("Editar Receita");
                 stage.setScene(new Scene(root));
@@ -103,7 +107,12 @@ public class ReceitasController implements Initializable {
                 dialogoInfo.showAndWait();
             }
 
-        } catch (IOException e) {
+        } catch (Exception e) {
+            Alert dialogoInfo = new Alert(Alert.AlertType.ERROR);
+            dialogoInfo.setTitle("Erro Inesperado");
+            dialogoInfo.setHeaderText(null);
+            dialogoInfo.setContentText(e.getMessage());
+            dialogoInfo.showAndWait();
             e.printStackTrace();
         }
     }

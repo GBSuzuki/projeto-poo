@@ -22,7 +22,6 @@ public class BancoDeReceitas implements IBancoDeReceitas {
         this.estoque = estoque;
         this.persistenceService = persistenceService;
         this.produtosFinais = new HashMap<>();
-        ;
         Receitas = new ArrayList<>();
         Receitas = persistenceService.getBancoReceitas();
     }

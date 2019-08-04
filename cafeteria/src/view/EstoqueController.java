@@ -17,7 +17,6 @@ import service.interfaces.IEstoque;
 import service.interfaces.ITranscaoService;
 
 import javax.inject.Inject;
-import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
@@ -64,7 +63,7 @@ public class EstoqueController implements Initializable {
         try {
             FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("CompraProduto.fxml"));
             fxmlLoader.setControllerFactory(IoC.context::getInstance);
-            Parent root1 = (Parent) fxmlLoader.load();
+            Parent root1 = fxmlLoader.load();
             Stage stage = new Stage();
             stage.setTitle("Comprar Produto");
             stage.setScene(new Scene(root1));
@@ -75,7 +74,12 @@ public class EstoqueController implements Initializable {
                 reloadList();
             });
 
-        } catch (IOException e) {
+        } catch (Exception e) {
+            Alert dialogoInfo = new Alert(Alert.AlertType.ERROR);
+            dialogoInfo.setTitle("Erro Inesperado");
+            dialogoInfo.setHeaderText(null);
+            dialogoInfo.setContentText(e.getMessage());
+            dialogoInfo.showAndWait();
             e.printStackTrace();
         }
     }

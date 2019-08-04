@@ -7,10 +7,27 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9318db9a-586e-4cd1-94be-70059495064c" name="Default Changelist" comment="Remoção de atributos desnecessários.">
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/cafeteria/bundles/cafeteria-1.0.deb" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/cafeteria/bundles/cafeteria-1.0.deb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/cafeteria/bundles/cafeteria.jar" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/cafeteria/bundles/cafeteria.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/cafeteria/bundles/cafeteria.jnlp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/cafeteria/bundles/cafeteria.jnlp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/cafeteria/bundles/cafeteria/app/Estoque.json" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/cafeteria/bundles/cafeteria/app/Estoque.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/cafeteria/bundles/cafeteria/app/cafeteria.db" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/cafeteria/bundles/cafeteria/app/cafeteria.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/cafeteria/bundles/cafeteria/app/cafeteria.jar" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/cafeteria/bundles/cafeteria/app/cafeteria.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/cafeteria/cafeteria.jar" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/cafeteria/cafeteria.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/cafeteria/cafeteria.jnlp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/cafeteria/cafeteria.jnlp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/domain/Compra.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/domain/Compra.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/domain/Receita.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/domain/Receita.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/service/BancoDeReceitas.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/service/BancoDeReceitas.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/service/PersistenceService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/service/PersistenceService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/service/interfaces/IBancoDeReceitas.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/service/interfaces/IBancoDeReceitas.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/view/CaixaController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/CaixaController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/view/CompraProdutoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/CompraProdutoController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/view/EstoqueController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/EstoqueController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/view/NovaReceitaController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/NovaReceitaController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/view/ReceitasController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/ReceitasController.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -62,7 +79,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/src/view" />
-    <property name="project.structure.last.edited" value="SDKs" />
+    <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
@@ -165,6 +182,7 @@
       <workItem from="1564798773131" duration="14000" />
       <workItem from="1564798810881" duration="6772000" />
       <workItem from="1564831996842" duration="20953000" />
+      <workItem from="1564949432920" duration="497000" />
     </task>
     <task id="LOCAL-00001" summary="Tentativa de implementação da GUI">
       <created>1564318970214</created>

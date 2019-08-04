@@ -5,12 +5,12 @@ import com.google.gson.GsonBuilder;
 import com.google.gson.reflect.TypeToken;
 import domain.MateriaPrima;
 import domain.Receita;
+import javafx.scene.control.Alert;
 import service.interfaces.IPersistenceService;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.FileWriter;
-import java.io.IOException;
 import java.util.ArrayList;
 
 public class PersistenceService implements IPersistenceService {
@@ -44,7 +44,12 @@ public class PersistenceService implements IPersistenceService {
             writer.write(json);
             writer.close();
 
-        } catch (IOException e) {
+        } catch (Exception e) {
+            Alert dialogoInfo = new Alert(Alert.AlertType.ERROR);
+            dialogoInfo.setTitle("Erro Inesperado");
+            dialogoInfo.setHeaderText(null);
+            dialogoInfo.setContentText(e.getMessage());
+            dialogoInfo.showAndWait();
             e.printStackTrace();
         }
     }

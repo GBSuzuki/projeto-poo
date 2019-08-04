@@ -1,6 +1,5 @@
 package domain;
 
-import javax.inject.Inject;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.UUID;

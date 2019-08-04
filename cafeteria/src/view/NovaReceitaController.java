@@ -15,11 +15,8 @@ import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
 import service.interfaces.IBancoDeReceitas;
 import service.interfaces.IEstoque;
-import service.interfaces.ITranscaoService;
 
 import javax.inject.Inject;
-import java.io.IOException;
-import java.lang.reflect.InvocationTargetException;
 import java.net.URL;
 import java.util.Map;
 import java.util.ResourceBundle;
@@ -101,13 +98,18 @@ public class NovaReceitaController implements Initializable {
         try {
             FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("SelMateriaPrima.fxml"));
             fxmlLoader.setControllerFactory(IoC.context::getInstance);
-            Parent root = (Parent) fxmlLoader.load();
+            Parent root = fxmlLoader.load();
             Stage stage = new Stage();
             stage.setTitle("Selecionar Produto");
             stage.setScene(new Scene(root));
             stage.setResizable(false);
             stage.show();
-        } catch (IOException e) {
+        } catch (Exception e) {
+            Alert dialogoInfo = new Alert(Alert.AlertType.ERROR);
+            dialogoInfo.setTitle("Erro Inesperado");
+            dialogoInfo.setHeaderText(null);
+            dialogoInfo.setContentText(e.getMessage());
+            dialogoInfo.showAndWait();
             e.printStackTrace();
         }
     }

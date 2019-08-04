@@ -1,15 +1,10 @@
 package view;
 
 import domain.Compra;
-import eu.lestard.easydi.EasyDI;
 import javafx.fxml.FXML;
-import javafx.scene.control.*;
+import javafx.scene.control.Button;
+import javafx.scene.control.TextField;
 import javafx.stage.Stage;
-import service.Estoque;
-import service.PersistenceService;
-import service.TransacaoService;
-import service.interfaces.IEstoque;
-import service.interfaces.IPersistenceService;
 import service.interfaces.ITranscaoService;
 
 
