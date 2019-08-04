@@ -6,27 +6,27 @@
     "Preco": 5.0
   },
   {
-    "Id": "91e40d1d-c0e3-433c-87b5-825b1c663604",
-    "Nome": "Pão",
-    "Quantidade": 6,
-    "Preco": 2.0
-  },
-  {
-    "Id": "37c72b5d-79f3-4585-b664-f20ffc98b224",
-    "Nome": "Manteiga",
-    "Quantidade": 22,
-    "Preco": 10.0
-  },
-  {
     "Id": "9b48e440-c44a-44cc-a692-c5b87c95f7c2",
     "Nome": "Café",
-    "Quantidade": 11,
+    "Quantidade": 4,
     "Preco": 10.0
   },
   {
     "Id": "f1be5303-7eee-44b5-8366-524408ca2bba",
     "Nome": "Leite",
-    "Quantidade": 18,
+    "Quantidade": 17,
     "Preco": 5.0
+  },
+  {
+    "Id": "91e40d1d-c0e3-433c-87b5-825b1c663604",
+    "Nome": "Pão",
+    "Quantidade": 16,
+    "Preco": 2.0
+  },
+  {
+    "Id": "37c72b5d-79f3-4585-b664-f20ffc98b224",
+    "Nome": "Manteiga",
+    "Quantidade": 2,
+    "Preco": 10.0
   }
 ]

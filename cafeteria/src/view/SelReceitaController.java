@@ -48,20 +48,31 @@ public class SelReceitaController implements Initializable {
     @FXML
     public void botaoAdicionar() {
         if (!fieldMP.getText().isEmpty()) {
-            if(receitas.getReceita(fieldMP.getText()) == null)
-            {
+            if (receitas.getReceita(fieldMP.getText()) == null) {
                 Alert dialogoInfo = new Alert(Alert.AlertType.INFORMATION);
                 dialogoInfo.setTitle("Receita");
                 dialogoInfo.setHeaderText("Receita não existente");
                 dialogoInfo.setContentText("Favor contruir a receita antes de realizar uma venda.");
                 dialogoInfo.showAndWait();
                 fieldMP.setText("");
-            }
-            else {
-                CaixaController.receitasCompradas.add(new CaixaController.Compradas(fieldMP.getText(), Float.toString(receitas.ObterPreco(fieldMP.getText()))));
+            } else {
+                // Faz a contagem de produtos com o mesmo nome já adicionados ao carrinho
+                int qtdComprada = (int) CaixaController.receitasCompradas.stream().filter(x -> x.getProduto().equals(fieldMP.getText())).count();
 
-                Stage stage = (Stage) botaoAdicionar.getScene().getWindow();
-                stage.close();
+                // Verifica se ainda é possível vender mais um
+                if (qtdComprada + 1 <= receitas.obterDisp(receitas.getReceita(fieldMP.getText()).getId())) {
+                    CaixaController.receitasCompradas.add(new CaixaController.Compradas(fieldMP.getText(), Float.toString(receitas.ObterPreco(fieldMP.getText()))));
+
+                    Stage stage = (Stage) botaoAdicionar.getScene().getWindow();
+                    stage.close();
+                } else {
+                    Alert dialogoInfo = new Alert(Alert.AlertType.ERROR);
+                    dialogoInfo.setTitle("Receita");
+                    dialogoInfo.setHeaderText("Problema de Estoque");
+                    dialogoInfo.setContentText("Não há produtos suficientes para vender\nessa receita!");
+                    dialogoInfo.showAndWait();
+                    fieldMP.setText("");
+                }
             }
         }
     }

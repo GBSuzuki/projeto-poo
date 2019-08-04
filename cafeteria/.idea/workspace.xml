@@ -7,24 +7,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9318db9a-586e-4cd1-94be-70059495064c" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/sqlite_jdbc_3_27_2_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/sqlite_jdbc_3_27_2_1.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BancoReceitas.json" beforeDir="false" afterPath="$PROJECT_DIR$/BancoReceitas.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Estoque.json" beforeDir="false" afterPath="$PROJECT_DIR$/Estoque.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cafeteria.db" beforeDir="false" afterPath="$PROJECT_DIR$/cafeteria.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/cafeteria/view/Caixa.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/cafeteria/view/Caixa.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/cafeteria/view/Estoque.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/cafeteria/view/Estoque.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/cafeteria/bundles/cafeteria-1.0.deb" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/cafeteria/bundles/cafeteria-1.0.deb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/cafeteria/bundles/cafeteria.jar" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/cafeteria/bundles/cafeteria.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/cafeteria/bundles/cafeteria.jnlp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/cafeteria/bundles/cafeteria.jnlp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/cafeteria/bundles/cafeteria/app/BancoReceitas.json" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/cafeteria/bundles/cafeteria/app/BancoReceitas.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/cafeteria/bundles/cafeteria/app/Estoque.json" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/cafeteria/bundles/cafeteria/app/Estoque.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/cafeteria/bundles/cafeteria/app/cafeteria.db" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/cafeteria/bundles/cafeteria/app/cafeteria.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/cafeteria/bundles/cafeteria/app/cafeteria.jar" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/cafeteria/bundles/cafeteria/app/cafeteria.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/cafeteria/cafeteria.jar" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/cafeteria/cafeteria.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/cafeteria/cafeteria.jnlp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/cafeteria/cafeteria.jnlp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/cafeteria/view/Receitas.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/cafeteria/view/Receitas.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/cafeteria/view/SelMateriaPrima.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/cafeteria/view/SelMateriaPrima.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/cafeteria/view/SelReceita.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/cafeteria/view/SelReceita.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/service/Estoque.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/service/Estoque.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/service/TransacaoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/service/TransacaoService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/service/interfaces/IEstoque.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/service/interfaces/IEstoque.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/view/CaixaController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/CaixaController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/view/EstoqueController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/EstoqueController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/view/Receitas.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/Receitas.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/view/ReceitasController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/ReceitasController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/view/SelReceitaController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/SelReceitaController.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -177,7 +174,7 @@
       <workItem from="1564796706616" duration="1204000" />
       <workItem from="1564798773131" duration="14000" />
       <workItem from="1564798810881" duration="6772000" />
-      <workItem from="1564831996842" duration="18363000" />
+      <workItem from="1564831996842" duration="20953000" />
     </task>
     <task id="LOCAL-00001" summary="Tentativa de implementação da GUI">
       <created>1564318970214</created>
@@ -242,7 +239,14 @@
       <option name="project" value="LOCAL" />
       <updated>1564930641332</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Corrigido problema de venda, onde produtos não eram removidos do estoque após operação de venda estar concluída.">
+      <created>1564942742661</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1564942742661</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -273,7 +277,8 @@
     <MESSAGE value="Botão para edição das receitas implementado." />
     <MESSAGE value="Projeto alterado para oo JDK 8 (Oracle) com o intuito de criar um executável para ubuntu sem dependências externas." />
     <MESSAGE value="Client concluído e exportações feitas." />
-    <option name="LAST_COMMIT_MESSAGE" value="Client concluído e exportações feitas." />
+    <MESSAGE value="Corrigido problema de venda, onde produtos não eram removidos do estoque após operação de venda estar concluída." />
+    <option name="LAST_COMMIT_MESSAGE" value="Corrigido problema de venda, onde produtos não eram removidos do estoque após operação de venda estar concluída." />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">

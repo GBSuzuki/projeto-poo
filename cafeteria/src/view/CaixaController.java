@@ -83,7 +83,7 @@ public class CaixaController implements Initializable {
         try {
             FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("SelReceita.fxml"));
             fxmlLoader.setControllerFactory(IoC.context::getInstance);
-            Parent root = (Parent) fxmlLoader.load();
+            Parent root = fxmlLoader.load();
             Stage stage = new Stage();
             stage.setTitle("Selecionar Receita");
             stage.setScene(new Scene(root));
@@ -104,8 +104,9 @@ public class CaixaController implements Initializable {
             for (Compradas x : receitasCompradas){
                 transacao.efetuaVenda(new Venda(receitas.getReceita(x.getProduto()).getNomeReceita(), 1, receitas.ObterPreco(x.getProduto())));
             }
-
             receitasCompradas.clear();
+            atualizaPreco();
+
             Alert dialogoInfo = new Alert(Alert.AlertType.INFORMATION);
             dialogoInfo.setTitle("Compra Finalizada");
             dialogoInfo.setHeaderText(null);
@@ -118,6 +119,8 @@ public class CaixaController implements Initializable {
     private void Cancelar(){
         if(!receitasCompradas.isEmpty()) {
             receitasCompradas.clear();
+            atualizaPreco();
+
             Alert dialogoInfo = new Alert(Alert.AlertType.ERROR);
             dialogoInfo.setTitle("Compra Cancelada");
             dialogoInfo.setHeaderText(null);
@@ -133,7 +136,7 @@ public class CaixaController implements Initializable {
             precoFinalFloat += receitas.ObterPreco(x.getProduto());
         }
 
-        precoFinal.setText("R$ " + Float.toString(precoFinalFloat) + "0");
+        precoFinal.setText("R$ " + precoFinalFloat + "0");
     }
 
     public static class Compradas {
