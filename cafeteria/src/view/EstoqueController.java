@@ -58,6 +58,7 @@ public class EstoqueController implements Initializable {
     public void reloadList() {
         tbData.getItems().clear();
         tbData.getItems().addAll(estoque.getMateriais());
+        tbData.getSortOrder().add(nome);
     }
 
     @FXML

@@ -1,5 +1,6 @@
 package view;
 
+import domain.Venda;
 import helpers.IoC;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.collections.FXCollections;
@@ -99,6 +100,11 @@ public class CaixaController implements Initializable {
     @FXML
     private void Pagar(){
         if(!receitasCompradas.isEmpty()) {
+
+            for (Compradas x : receitasCompradas){
+                transacao.efetuaVenda(new Venda(receitas.getReceita(x.getProduto()).getNomeReceita(), 1, receitas.ObterPreco(x.getProduto())));
+            }
+
             receitasCompradas.clear();
             Alert dialogoInfo = new Alert(Alert.AlertType.INFORMATION);
             dialogoInfo.setTitle("Compra Finalizada");

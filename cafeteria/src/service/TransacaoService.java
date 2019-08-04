@@ -81,9 +81,14 @@ public class TransacaoService implements ITranscaoService {
     @Override
     public boolean efetuaVenda(ATransacao venda) {
         Receita receita = bancoDeReceitas.getReceita(venda.getNome());
-        for (Map.Entry<UUID, Integer> entry : receita.getIngredientes().entrySet())
+        /*for (Map.Entry<UUID, Integer> entry : receita.getIngredientes().entrySet())
             if (estoque.getMP(entry.getKey()).getQuantidade() < entry.getValue() * venda.getQuantidade())
-                return false;
+                return false;*/
+
+        for (Map.Entry<UUID, Integer> ingrediente : receita.getIngredientes().entrySet()) {
+            estoque.RemoveMP(estoque.getMP(ingrediente.getKey()).getNome(), ingrediente.getValue());
+        }
+
         insert(venda);
         return true;
     }

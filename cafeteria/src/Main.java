@@ -1,11 +1,15 @@
 import helpers.IoC;
 import javafx.application.Application;
+import javafx.beans.value.ChangeListener;
+import javafx.beans.value.ObservableValue;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.control.Tab;
 import javafx.scene.control.TabPane;
 import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
+import view.EstoqueController;
+import view.ReceitasController;
 
 import java.io.IOException;
 
@@ -14,6 +18,9 @@ public class Main extends Application {
     private Stage primaryStage;
     private BorderPane rootLayout;
     private TabPane rootTabPane;
+    FXMLLoader EstoqueTabLoader;
+    FXMLLoader CaixaTabLoader;
+    FXMLLoader ReceitasTabLoader;
 
     @Override
     public void start(Stage primaryStage) {
@@ -24,6 +31,19 @@ public class Main extends Application {
         addCaixaTab();
         addEstoqueTab();
         addReceitasTab();
+
+        rootTabPane.getSelectionModel().selectedItemProperty().addListener(
+                new ChangeListener<Tab>() {
+                    @Override
+                    public void changed(ObservableValue<? extends Tab> observable, Tab oldValue, Tab newValue) {
+                        EstoqueController estoque = (EstoqueController)(EstoqueTabLoader.getController());
+                        estoque.reloadList();
+
+                        ReceitasController receitas = (ReceitasController)(ReceitasTabLoader.getController());
+                        receitas.reloadList();
+                    }
+                }
+        );
     }
 
     /**
@@ -56,10 +76,10 @@ public class Main extends Application {
     public void addEstoqueTab() {
         try {
             // Carrega o FXML do estoque.
-            FXMLLoader loader = new FXMLLoader();
-            loader.setLocation(Main.class.getResource("view/Estoque.fxml"));
-            loader.setControllerFactory(IoC.context::getInstance);
-            BorderPane estoqueOverview = (BorderPane) loader.load();
+            EstoqueTabLoader = new FXMLLoader();
+            EstoqueTabLoader.setLocation(Main.class.getResource("view/Estoque.fxml"));
+            EstoqueTabLoader.setControllerFactory(IoC.context::getInstance);
+            BorderPane estoqueOverview = (BorderPane) EstoqueTabLoader.load();
 
             //Cria a tab 1 e define o conteudo do fxml.
             Tab tabEstoque = new Tab();
@@ -75,10 +95,10 @@ public class Main extends Application {
     public void addReceitasTab() {
         try {
             // Carrega o FXML do estoque.
-            FXMLLoader loader = new FXMLLoader();
-            loader.setLocation(Main.class.getResource("view/Receitas.fxml"));
-            loader.setControllerFactory(IoC.context::getInstance);
-            BorderPane receitasOverview = (BorderPane) loader.load();
+            ReceitasTabLoader = new FXMLLoader();
+            ReceitasTabLoader.setLocation(Main.class.getResource("view/Receitas.fxml"));
+            ReceitasTabLoader.setControllerFactory(IoC.context::getInstance);
+            BorderPane receitasOverview = (BorderPane) ReceitasTabLoader.load();
 
             //Cria a tab 1 e define o conteudo do fxml.
             Tab tabReceitas = new Tab();
@@ -94,10 +114,10 @@ public class Main extends Application {
     public void addCaixaTab() {
         try {
             // Carrega o FXML do estoque.
-            FXMLLoader loader = new FXMLLoader();
-            loader.setLocation(Main.class.getResource("view/Caixa.fxml"));
-            loader.setControllerFactory(IoC.context::getInstance);
-            BorderPane caixaOverview = (BorderPane) loader.load();
+            CaixaTabLoader = new FXMLLoader();
+            CaixaTabLoader.setLocation(Main.class.getResource("view/Caixa.fxml"));
+            CaixaTabLoader.setControllerFactory(IoC.context::getInstance);
+            BorderPane caixaOverview = (BorderPane) CaixaTabLoader.load();
 
             //Cria a tab 1 e define o conteudo do fxml.
             Tab tabCaixa = new Tab();

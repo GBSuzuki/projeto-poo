@@ -12,7 +12,7 @@
    <center>
       <TableView fx:id="tbData" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
         <columns>
-          <TableColumn fx:id="nome" prefWidth="110.0" text="Nome" />
+          <TableColumn fx:id="nome" prefWidth="110.0" sortType="DESCENDING" text="Nome" />
             <TableColumn fx:id="preco" prefWidth="75.0" text="Preço" />
             <TableColumn fx:id="qtd" prefWidth="100.0" text="Disponível" />
         </columns>

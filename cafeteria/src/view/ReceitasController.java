@@ -53,6 +53,7 @@ public class ReceitasController implements Initializable {
     public void reloadList() {
         tbData.getItems().clear();
         tbData.getItems().addAll(receitas.getReceitas());
+        tbData.getSortOrder().add(nome);
     }
 
     @FXML

@@ -31,6 +31,16 @@ public class Estoque implements IEstoque {
         persistenceService.setEstoque(Materiais);
     }
 
+    public void RemoveMP(String nome, int quantidade){
+        MateriaPrima mp = getMP(nome);
+        mp.updateQuantidade(quantidade * -1);
+        Materiais.removeIf(x -> x.getNome().equals(nome));
+        Materiais.add(mp);
+
+        //Remover do json
+        persistenceService.setEstoque(Materiais);
+    }
+
     /* Método adiciona matéria prima ao estoque, verifica se já existe alguma
      * com mesmo nome, se já existir apenas atualiza os dados.*/
     public void AdicionaMP(String nome, int quantidade, float preco) {

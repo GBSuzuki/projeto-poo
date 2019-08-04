@@ -8,6 +8,8 @@ import java.util.UUID;
 public interface IEstoque {
     void RemoveMP(UUID id_MP);
 
+    void RemoveMP(String nome, int quantidade);
+
     void AdicionaMP(String nome, int quantidade, float preco);
 
     MateriaPrima getMP(String nome);
