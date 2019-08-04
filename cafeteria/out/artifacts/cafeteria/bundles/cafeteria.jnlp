@@ -8,7 +8,7 @@
   </information>
   <resources>
     <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
-    <jar href="cafeteria.jar" size="7728170" download="eager" />
+    <jar href="cafeteria.jar" size="7729030" download="eager" />
   </resources>
   <jfx:javafx-desc  width="600" height="400" main-class="Main"  name="cafeteria" />
   <update check="background"/>

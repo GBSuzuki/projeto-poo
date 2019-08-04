@@ -6,28 +6,23 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9318db9a-586e-4cd1-94be-70059495064c" name="Default Changelist" comment="Remoção de atributos desnecessários.">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="9318db9a-586e-4cd1-94be-70059495064c" name="Default Changelist" comment="Ajuste no tratamento de exceções.">
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BancoReceitas.json" beforeDir="false" afterPath="$PROJECT_DIR$/BancoReceitas.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Estoque.json" beforeDir="false" afterPath="$PROJECT_DIR$/Estoque.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cafeteria.db" beforeDir="false" afterPath="$PROJECT_DIR$/cafeteria.db" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/cafeteria/bundles/cafeteria-1.0.deb" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/cafeteria/bundles/cafeteria-1.0.deb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/cafeteria/bundles/cafeteria.jar" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/cafeteria/bundles/cafeteria.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/cafeteria/bundles/cafeteria.jnlp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/cafeteria/bundles/cafeteria.jnlp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/cafeteria/bundles/cafeteria/app/Estoque.json" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/cafeteria/bundles/cafeteria/app/Estoque.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/cafeteria/bundles/cafeteria/app/cafeteria.db" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/cafeteria/bundles/cafeteria/app/cafeteria.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/cafeteria/bundles/cafeteria/app/BancoReceitas.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/cafeteria/bundles/cafeteria/app/Estoque.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/cafeteria/bundles/cafeteria/app/cafeteria.db" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/cafeteria/bundles/cafeteria/app/cafeteria.jar" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/cafeteria/bundles/cafeteria/app/cafeteria.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/cafeteria/cafeteria.jar" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/cafeteria/cafeteria.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/cafeteria/cafeteria.jnlp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/cafeteria/cafeteria.jnlp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/domain/Compra.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/domain/Compra.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/domain/Receita.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/domain/Receita.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/service/BancoDeReceitas.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/service/BancoDeReceitas.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/service/PersistenceService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/service/PersistenceService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/service/interfaces/IBancoDeReceitas.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/service/interfaces/IBancoDeReceitas.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/view/CaixaController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/CaixaController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/view/CompraProdutoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/CompraProdutoController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/view/EstoqueController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/EstoqueController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/view/NovaReceitaController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/NovaReceitaController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/view/ReceitasController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/ReceitasController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/cafeteria_jar/cafeteria.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/cafeteria/META-INF/cafeteria.kotlin_module" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -150,6 +145,16 @@
       </list>
     </recent_temporary>
   </component>
+  <component name="ServiceViewManager">
+    <option name="allServicesViewState">
+      <serviceView>
+        <treeState>
+          <expand />
+          <select />
+        </treeState>
+      </serviceView>
+    </option>
+  </component>
   <component name="SpellCheckerSettings" BundledDictionaries="3" BundledDictionary0="android.dic" BundledDictionary1="jetbrains.dic" BundledDictionary2="english.dic" Folders="0" CustomDictionaries="0" Dictionaries="0" CorrectionsLimit="5" DefaultDictionary="project-level" UseSingleDictionary="true" />
   <component name="SvnConfiguration">
     <configuration />
@@ -182,7 +187,7 @@
       <workItem from="1564798773131" duration="14000" />
       <workItem from="1564798810881" duration="6772000" />
       <workItem from="1564831996842" duration="20953000" />
-      <workItem from="1564949432920" duration="497000" />
+      <workItem from="1564949432920" duration="3615000" />
     </task>
     <task id="LOCAL-00001" summary="Tentativa de implementação da GUI">
       <created>1564318970214</created>
@@ -254,7 +259,14 @@
       <option name="project" value="LOCAL" />
       <updated>1564942742661</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Ajuste no tratamento de exceções.">
+      <created>1564949972945</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1564949972945</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -287,7 +299,8 @@
     <MESSAGE value="Client concluído e exportações feitas." />
     <MESSAGE value="Corrigido problema de venda, onde produtos não eram removidos do estoque após operação de venda estar concluída." />
     <MESSAGE value="Remoção de atributos desnecessários." />
-    <option name="LAST_COMMIT_MESSAGE" value="Remoção de atributos desnecessários." />
+    <MESSAGE value="Ajuste no tratamento de exceções." />
+    <option name="LAST_COMMIT_MESSAGE" value="Ajuste no tratamento de exceções." />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
