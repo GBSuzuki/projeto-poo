@@ -24,14 +24,12 @@ import java.util.ResourceBundle;
 public class EstoqueController implements Initializable {
     private final ITranscaoService transacao;
     private final IEstoque estoque;
-    private final IBancoDeReceitas receitas;
 
     //Injeta o estoque
     @Inject
     public EstoqueController(IEstoque estoque, ITranscaoService transacao, IBancoDeReceitas receitas) {
         this.transacao = transacao;
         this.estoque = estoque;
-        this.receitas = receitas;
     }
 
     @FXML

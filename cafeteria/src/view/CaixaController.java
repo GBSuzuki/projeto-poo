@@ -28,7 +28,6 @@ import java.util.ResourceBundle;
 public class CaixaController implements Initializable {
     private final ITranscaoService transacao;
     private final IBancoDeReceitas receitas;
-    private final IEstoque estoque;
     public static ObservableList<Compradas> receitasCompradas = FXCollections.observableArrayList();
 
     //Injeta o estoque
@@ -36,7 +35,6 @@ public class CaixaController implements Initializable {
     public CaixaController(IBancoDeReceitas receitas, ITranscaoService transacao, IEstoque estoque) {
         this.transacao = transacao;
         this.receitas = receitas;
-        this.estoque = estoque;
     }
 
     @FXML

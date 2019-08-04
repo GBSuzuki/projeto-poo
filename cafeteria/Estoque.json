@@ -6,18 +6,6 @@
     "Preco": 5.0
   },
   {
-    "Id": "9b48e440-c44a-44cc-a692-c5b87c95f7c2",
-    "Nome": "Café",
-    "Quantidade": 4,
-    "Preco": 10.0
-  },
-  {
-    "Id": "f1be5303-7eee-44b5-8366-524408ca2bba",
-    "Nome": "Leite",
-    "Quantidade": 17,
-    "Preco": 5.0
-  },
-  {
     "Id": "91e40d1d-c0e3-433c-87b5-825b1c663604",
     "Nome": "Pão",
     "Quantidade": 16,
@@ -28,5 +16,23 @@
     "Nome": "Manteiga",
     "Quantidade": 2,
     "Preco": 10.0
+  },
+  {
+    "Id": "9b48e440-c44a-44cc-a692-c5b87c95f7c2",
+    "Nome": "Café",
+    "Quantidade": 0,
+    "Preco": 10.0
+  },
+  {
+    "Id": "f1be5303-7eee-44b5-8366-524408ca2bba",
+    "Nome": "Leite",
+    "Quantidade": 2,
+    "Preco": 5.0
+  },
+  {
+    "Id": "53b2bfe9-0026-4fc8-9582-2f4f09edcf02",
+    "Nome": "Toddy",
+    "Quantidade": 9,
+    "Preco": 2.0
   }
 ]

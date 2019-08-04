@@ -18,9 +18,9 @@ public class Main extends Application {
     private Stage primaryStage;
     private BorderPane rootLayout;
     private TabPane rootTabPane;
-    FXMLLoader EstoqueTabLoader;
-    FXMLLoader CaixaTabLoader;
-    FXMLLoader ReceitasTabLoader;
+    private FXMLLoader EstoqueTabLoader;
+    private FXMLLoader CaixaTabLoader;
+    private FXMLLoader ReceitasTabLoader;
 
     @Override
     public void start(Stage primaryStage) {

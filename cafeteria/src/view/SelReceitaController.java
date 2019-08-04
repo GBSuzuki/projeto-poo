@@ -17,7 +17,6 @@ import java.util.ArrayList;
 import java.util.ResourceBundle;
 
 public class SelReceitaController implements Initializable {
-    private final IEstoque estoque;
     private final IBancoDeReceitas receitas;
     private ArrayList<String> mps = new ArrayList<>();
 
@@ -32,7 +31,6 @@ public class SelReceitaController implements Initializable {
 
     @Inject
     public SelReceitaController(IEstoque estoque, IBancoDeReceitas receitas) {
-        this.estoque = estoque;
         this.receitas = receitas;
     }
 

@@ -6,21 +6,16 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9318db9a-586e-4cd1-94be-70059495064c" name="Default Changelist" comment="">
+    <list default="true" id="9318db9a-586e-4cd1-94be-70059495064c" name="Default Changelist" comment="Remoção de atributos desnecessários.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BancoReceitas.json" beforeDir="false" afterPath="$PROJECT_DIR$/BancoReceitas.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Estoque.json" beforeDir="false" afterPath="$PROJECT_DIR$/Estoque.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cafeteria.db" beforeDir="false" afterPath="$PROJECT_DIR$/cafeteria.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/cafeteria/bundles/cafeteria-1.0.deb" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/cafeteria/bundles/cafeteria-1.0.deb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/cafeteria/bundles/cafeteria.jar" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/cafeteria/bundles/cafeteria.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/cafeteria/bundles/cafeteria.jnlp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/cafeteria/bundles/cafeteria.jnlp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/cafeteria/bundles/cafeteria/app/BancoReceitas.json" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/cafeteria/bundles/cafeteria/app/BancoReceitas.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/cafeteria/bundles/cafeteria/app/Estoque.json" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/cafeteria/bundles/cafeteria/app/Estoque.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/cafeteria/bundles/cafeteria/app/cafeteria.db" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/cafeteria/bundles/cafeteria/app/cafeteria.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/cafeteria/bundles/cafeteria/app/cafeteria.jar" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/cafeteria/bundles/cafeteria/app/cafeteria.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/cafeteria/cafeteria.jar" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/cafeteria/cafeteria.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/cafeteria/cafeteria.jnlp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/cafeteria/cafeteria.jnlp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/cafeteria/view/Receitas.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/cafeteria/view/Receitas.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/cafeteria/view/RootLayout.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/cafeteria/view/RootLayout.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/view/CaixaController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/CaixaController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/view/EstoqueController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/EstoqueController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/view/RootLayout.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/RootLayout.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/view/SelReceitaController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/SelReceitaController.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -60,6 +55,7 @@
     <option name="PREVIOUS_COMMIT_AUTHORS">
       <list>
         <option value="Raphael de Freitas &lt;raphaeldefreitas2009@gmail.com&gt;" />
+        <option value="ra" />
       </list>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
@@ -278,7 +274,8 @@
     <MESSAGE value="Projeto alterado para oo JDK 8 (Oracle) com o intuito de criar um executável para ubuntu sem dependências externas." />
     <MESSAGE value="Client concluído e exportações feitas." />
     <MESSAGE value="Corrigido problema de venda, onde produtos não eram removidos do estoque após operação de venda estar concluída." />
-    <option name="LAST_COMMIT_MESSAGE" value="Corrigido problema de venda, onde produtos não eram removidos do estoque após operação de venda estar concluída." />
+    <MESSAGE value="Remoção de atributos desnecessários." />
+    <option name="LAST_COMMIT_MESSAGE" value="Remoção de atributos desnecessários." />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
